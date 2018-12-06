@@ -30,6 +30,23 @@
 		background-color: $color-one-600;
 	}
 
+	&.button-black {
+		background-color: #2A2A2A;
+
+		&:visited {
+			background-color: #2A2A2A;
+		}
+
+		&:hover,
+		&:focus {
+			background-color: #171818;
+		}
+
+		&:active {
+			background-color: #171818;
+		}
+	}
+
 	&.button-small {
 		@include font-size-400;
 	}

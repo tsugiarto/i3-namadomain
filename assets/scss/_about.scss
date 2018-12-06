@@ -1,0 +1,143 @@
+.about-section {
+
+  &:not(:last-child) {
+    padding-bottom: 12px;
+  }
+
+  .inner {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .about-section-heading {
+    text-align: center;
+    margin-bottom: 48px;
+
+    .title {
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      color: #686868;
+    }
+  }
+}
+
+.about-section {
+  &.story {
+    padding-bottom: 0;
+    
+    .inner {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    .story-text {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.8;
+      max-width: 1024px;
+      margin: 0 auto;
+      text-align: center;
+
+      p {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &.projects {
+    padding-top: 48px;
+    
+    .inner {
+      border-top: 4px solid $color-one-500;
+    }
+
+    #mnsry_container {
+      margin: -6px;
+      position: relative;
+    
+      .gallery-item {
+        width: 50%;
+        padding: 6px;
+    
+        .link {
+          display: block;
+          overflow: hidden;
+        }
+    
+        img {
+          width: 100%;
+          transform: scale(1);
+          transition: all 0.3s ease-out;
+        }
+
+        &:hover {
+          img {
+            transform: scale(1.2);
+          }
+        }
+    
+        @media screen and (min-width: 480px) {
+          width: 33.333333%;
+        }
+      }
+    }
+  }
+}
+
+.about-slider {
+  .slides {
+    .slide {
+      display: block;
+      width: 100%;
+
+      .slide-text {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 10%;
+        display: flex;
+        align-items: center;
+        background-color: rgba($color-one-500, 0.7);
+        max-width: 540px;
+        padding: 24px 48px;
+
+        .text {
+          color: $white;
+          line-height: 1.8;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .flickity-prev-next-button {
+      background-color: $black;
+      opacity: 0.5;
+
+      .arrow {
+        fill: $white;
+      }
+
+      &.previous {
+        left: 24px;
+      }
+
+      &.next {
+        right: 24px;
+      }
+
+      @include breakpoint(runner) {
+        &.previous {
+          left: 32px;
+        }
+  
+        &.next {
+          right: 32px;
+        }
+      }
+    }
+  }
+}

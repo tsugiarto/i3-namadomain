@@ -20,12 +20,158 @@
 }
 
 .site-header {
-	background-color: $white;
+	background-color: #F9F9F9;
 	border-bottom: 1px solid rgba($black, 0.1);
 	flex: 0 0 auto;
 	position: relative;
 	width: 100%;
 	z-index: 8;
+
+	.site-header-top {
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+
+		.inner {
+			padding-top: 12px;
+			padding-bottom: 12px;
+			display: flex;
+			align-items: center;
+		}
+
+		.header-top-logo {
+			flex: 1 1 0;
+
+			.site-logo {
+				max-width: 148px;
+			}
+		}
+
+		.header-top-nav {
+			display: flex;
+			font-size: 14px;
+
+			.list {
+				margin-bottom: 0;
+				padding-left: 0;
+				list-style-type: none;
+
+				& + .list {
+					padding-left: 12px;
+					margin-left: 12px;
+					border-left: 1px solid rgba(0,0,0,0.2);
+				}
+
+				.item {
+					display: block;
+					float: left;
+					padding: 2px 12px;
+
+					&:hover {
+						opacity: 0.5;
+					}
+
+					.link {
+						color: $color-text;
+						display: flex;
+						align-items: center;
+						text-decoration: none;
+
+						.icon {
+							color: $color-one-500;
+							font-size: 18px;
+							margin-right: 8px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.site-header-bottom {
+
+		.site-header-nav {
+			.list {
+				padding: 12px 0;
+				margin: 0 -12px;
+
+				&::after {
+					content: "";
+					display: table;
+					width: 100%;
+					clear: both;
+				}
+
+				.item {
+					display: block;
+					float: left;
+					padding: 6px 12px;
+
+					&:hover {
+						opacity: 0.5;
+					}
+
+					.link {
+						color: $color-text;
+						text-decoration: none;
+					}
+
+					&.item-current {
+						.link {
+							color: $color-one-500;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.domain-search {
+	margin-top: -1px;
+	background-color: #F9F9F9;
+	border-bottom: 1px solid rgba($black, 0.1);
+	padding-bottom: 12px;
+	position: relative;
+	z-index: 8;
+
+	.domain-search-form {
+		.search-field {
+			display: flex;
+
+			.input {
+				width: 100%;
+				padding: 12px;
+				border-top-left-radius: 8px;
+				border-bottom-left-radius: 8px;
+			}
+
+			.button-search {
+				padding-left: 24px;
+				padding-right: 24px;
+				border-top-right-radius: 8px;
+				border-bottom-right-radius: 8px;
+				font-size: 18px;
+				font-weight: 700;
+			}
+		}
+
+		.domain-extension {
+			.list {
+				display: flex;
+				list-style-type: none;
+				margin: 0 -12px;
+				padding: 0;
+
+				.item {
+					padding: 12px;
+
+					.label {
+						padding-left: 2px;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
 }
 
 .site-content {
@@ -42,6 +188,15 @@
 			padding-bottom: 48px;
 			padding-top: 48px;
 			width: 100%;
+
+			&.zero-top {
+				padding-top: 0;
+			}
+
+			&.vertical-zero {
+				padding-top: 0;
+				padding-bottom: 0;
+			}
 
 			@include breakpoint(runner) {
 				flex-direction: row;
@@ -62,8 +217,155 @@
 
 	@at-root {
 		.site-footer-inner {
-			padding-bottom: 24px;
-			padding-top: 24px;
+			padding-top: 38px;
+			padding-bottom: 38px;
+		}
+	}
+
+	.site-footer-content {
+		padding-top: 38px;
+		padding-bottom: 38px;
+		border-top: 1px solid rgba($white, 0.3);
+		border-bottom: 1px solid rgba($white, 0.3);
+		display: flex;
+		width: 100%;
+
+		.footer-contact {
+			width: 100%;
+			max-width: 380px;
+
+			.footer-contact-info {
+				display: flex;
+				margin-bottom: 24px;
+
+				.certificates {
+					.list {
+						list-style-type: none;
+						padding-left: 0;
+
+						.item {
+							&:not(:last-child) {
+								margin-bottom: 24px;
+							}
+						}
+					}
+				}
+
+				.address {
+					padding-left: 48px;
+
+					.company-address {
+						padding-bottom: 16px;
+
+						strong {
+							display: block;
+							margin-bottom: 6px;
+						}
+
+						address {
+							font-size: 14px;
+						}
+					}
+
+					.social-media {
+
+						.list {
+							display: flex;
+							list-style-type: none;
+							padding-left: 0;
+							margin: -8px;
+
+							.item {
+								padding: 8px;
+
+								.link {
+									color: $white;
+									font-size: 18px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.footer-subscribe {
+				.footer-subscribe-form {
+					.label {
+						display: block;
+						font-weight: 700;
+						margin-bottom: 8px;
+					}
+
+					.field {
+						display: flex;
+						width: 100%;
+						border-radius: 8px;
+
+						.input {
+							width: 100%;
+							padding: 8px 12px;
+							color: $color-text;
+							border-top-left-radius: 8px;
+							border-bottom-left-radius: 8px;
+							font-size: 14px;
+						}
+
+						.button {
+							padding: 8px 24px;
+							font-weight: 700;
+							border-top-right-radius: 8px;
+							border-bottom-right-radius: 8px;
+							font-size: 14px;
+						}
+					}
+				}
+			}
+		}
+
+		.footer-nav {
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+			padding-left: 48px;
+
+			.footer-nav-section {
+				width: 33.333333%;
+
+				.section-item {
+					&:not(:last-child) {
+						margin-bottom: 32px;
+					}
+
+					.heading {
+						text-transform: uppercase;
+						margin-bottom: 16px;
+					}
+
+					.list {
+						padding-left: 0;
+						list-style-type: none;
+
+						.item {
+							&:not(:last-child) {
+								margin-bottom: 6px;
+							}
+
+							.link {
+								color: $white;
+								font-size: 14px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.site-footer-attribution {
+		padding-top: 24px;
+		
+		.site-copyright {
+			font-size: 14px;
 		}
 	}
 }

@@ -84,3 +84,45 @@
 		width: 24px;
 	}
 }
+
+.page-hero {
+  background-size: cover !important;
+  background-position: center !important;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(#545454, 0.4);
+  }
+
+  .inner {
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .page-hero-container {
+    width: 100%;
+    color: $white;
+    position: relative;
+
+    .heading {
+      .subtitle {
+        font-size: 24px;
+        margin-bottom: 24px;
+      }
+
+      .title {
+        font-size: 40px;
+      }
+    }
+  }
+}

@@ -1,0 +1,142 @@
+.help-section {
+
+  &:not(:last-child) {
+    padding-bottom: 12px;
+  }
+
+  .inner {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .help-section-heading {
+    text-align: center;
+    margin-bottom: 48px;
+
+    .title {
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      color: #686868;
+    }
+  }
+}
+
+.help-section {
+  &.intro {
+    margin-top: 48px;
+
+    .inner {
+      border-top: 4px solid $color-one-500;
+      display: flex;
+    }
+
+    .help-text {
+      width: 100%;
+      padding-right: 48px;
+
+      .title {
+        margin-bottom: 48px;
+      }
+    }
+
+    .help-list {
+      width: 100%;
+      max-width: 280px;
+
+      .list {
+        list-style-type: none;
+        padding-left: 0;
+
+        .item {
+          display: flex;
+          align-items: center;
+
+          &:not(:last-child) {
+            margin-bottom: 12px;
+          }
+
+          .help-icon {
+            font-size: 32px;
+          }
+
+          .help-link {
+            padding-left: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  &.promise {
+    .heading {
+      margin-bottom: 48px;
+    }
+    
+    .list {
+      list-style-type: none;
+      padding-left: 0;
+
+      .item {
+        position: relative;
+        padding-left: 32px;
+
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+        
+        .bullet {
+          position: absolute;
+          left: 0;
+          color: $color-one-500;
+        }
+      }
+    }
+  }
+
+  &.solution-center {
+    background-color: #F6F7F6;
+
+    .inner {
+      padding-top: 48px;
+      padding-bottom: 64px;
+    }
+
+    .solution-center-heading {
+      margin-bottom: 48px;
+
+      .title {
+        margin-bottom: 12px;
+      }
+
+      .subtitle {
+        color: #686868;
+      }
+    }
+
+    .solution-list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -24px;
+
+      .solution-item {
+        width: calc(33.333333% - 48px);
+        border-radius: 8px;
+        border: 1px solid #CCC;
+        box-shadow: 0 2px 2px rgba($black, 0.2);
+        margin: 24px;
+        background-color: $white;
+
+        .solution-icon {
+          padding: 32px;
+        }
+
+        .solution-title {
+          padding: 24px;
+          border-top: 1px solid $color-one-500;
+        }
+      }
+    }
+  }
+}

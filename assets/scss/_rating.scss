@@ -1,0 +1,170 @@
+@font-face {
+	font-family: 'rating';
+	src: url('../fonts/rating.eot?d8remi');
+	src: url('../fonts/rating.eot?d8remi#iefix') format('embedded-opentype'), url('../fonts/rating.ttf?d8remi') format('truetype'), url('../fonts/rating.woff?d8remi') format('woff'), url('../fonts/rating.svg?d8remi#rating') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@at-root {
+	.rating-star {
+		align-items: flex-end;
+		display: flex;
+
+		.star {
+			display: inline-block;
+			font-family: 'rating';
+			height: 16px;
+			line-height: 1;
+			position: relative;
+			text-rendering: auto;
+			vertical-align: middle;
+			white-space: nowrap;
+			width: 89px;
+
+			&:before {
+				content: "\e9d9\e9d9\e9d9\e9d9\e9d9";
+				color: $color-300;
+				float: left;
+				left: 0;
+				letter-spacing: -0.05em;
+				position: absolute;
+				top: 0;
+				letter-spacing: 2px;
+			}
+		}
+
+		.fill {
+			color: #E28A00;
+			float: left;
+			height: 16px;
+			left: 0;
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+
+			&:before {
+				content: "\e9d9\e9d9\e9d9\e9d9\e9d9";
+				left: 0;
+				letter-spacing: -0.05em;
+				position: absolute;
+				top: 0;
+				letter-spacing: 2px;
+			}
+		}
+
+		.count {
+			color: $color-text-light;
+			font-size: $font-size-300;
+			line-height: 14px;
+			margin-left: 4px;
+		}
+	}
+}
+
+@at-root {
+	.rating-histogram {
+		margin-bottom: 24px;
+
+		@include breakpoint(crawler) {
+			display: flex;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.rating-histogram-summary {
+		flex: 0 0 auto;
+		margin-bottom: 16px;
+
+		@include breakpoint(crawler) {
+			margin-bottom: 0;
+			margin-right: 32px;
+		}
+
+		.average {
+			font-size: $font-size-h6;
+			line-height: 1;
+			margin-bottom: 8px;
+			vertical-align: top;
+		}
+
+		.action {
+			margin-top: 16px;
+		}
+	}
+
+	.rating-histogram-graph {
+		flex: 1 1 0;
+
+		.graph {
+			border: none;
+
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			}
+
+			> thead,
+			> tbody,
+			> tfoot {
+
+				> tr {
+
+					> th,
+					> td {
+						border: none;
+					}
+				}
+			}
+
+			th {
+				padding: 0;
+			}
+
+			td {
+				padding: 0 0 1px;
+			}
+
+			.rank {
+				color: $color-text-light;
+				font-size: $font-size-400;
+				font-weight: 400;
+				height: 20px;
+				line-height: 20px;
+				padding-right: 8px;
+				white-space: nowrap;
+
+				.label {
+					display: inline-block;
+					height: 20px;
+					line-height: 20px;
+				}
+			}
+
+			.rating-bar {
+				width: 100%;
+
+				.rating {
+					background-color: $color-200;
+					height: 20px;
+				}
+
+				.bar {
+					background-color: $color-600;
+					height: 100%;
+				}
+			}
+
+			.count {
+				color: $color-text;
+				font-size: $font-size-400;
+				font-weight: 600;
+				line-height: 20px;
+				padding-left: 8px;
+				text-align: right;
+			}
+		}
+	}
+}
