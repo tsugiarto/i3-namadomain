@@ -65,12 +65,8 @@
 					float: left;
 					padding: 2px 12px;
 
-					&:hover {
-						opacity: 0.5;
-					}
-
 					.link {
-						color: $color-text;
+						color: $color-800;
 						display: flex;
 						align-items: center;
 						text-decoration: none;
@@ -80,6 +76,94 @@
 							font-size: 18px;
 							margin-right: 8px;
 						}
+					}
+
+					&:hover {
+						.link {
+							color: $color-one-500;
+						}
+					}
+				}
+			}
+
+			.popup-login {
+				padding-top: 12px;
+				position: absolute;
+				width: 360px;
+				right: 5%;
+				visibility: hidden;
+				opacity: 0;
+				transition: all 0.2s ease-out;
+				z-index: 8;
+
+				.popup-login-container {
+					border-radius: 8px;
+					background-color: #EBEBEB;
+					border: 1px solid #CAC7C7;
+					position: relative;
+
+					&:before {
+						content: "";
+						display: block;
+						position: absolute;
+						left: 0;
+						top: 12px;
+						bottom: 12px;
+						border-left: 5px solid $color-one-500;
+						margin-left: -1px;
+					}
+					
+					.form {
+						padding: 24px 28px 24px 32px;
+
+						.label {
+							margin-bottom: 8px;
+						}
+
+						.input {
+							border-radius: 4px;
+							padding: 6px 12px;
+						}
+
+						.form-action {
+							padding-top: 8px;
+							display: flex;
+
+							.button {
+								width: 100%;
+								max-width: 110px;
+								border-radius: 6px;
+								padding: 6px 12px;
+							}
+
+							.forgot-password-link {
+								width: 100%;
+								text-align: right;
+								font-size: 13px;
+							}
+						}
+					}
+
+					.sign-up-link {
+						border-top: 1px solid rgba(#434343, 0.2);
+						padding: 16px 28px 16px 32px;
+						font-size: 14px;
+
+						a {
+							color: $color-800;
+							font-weight: 700;
+						}
+					}
+				}
+			}
+
+			.popup-login-toggler {
+				&.link.is-toggled {
+					color: $color-one-500;
+
+					& + .popup-login {
+						visibility: visible;
+						opacity: 1;
 					}
 				}
 			}
@@ -105,13 +189,23 @@
 					float: left;
 					padding: 6px 12px;
 
-					&:hover {
-						opacity: 0.5;
+					.link {
+						color: $color-800;
+						text-decoration: none;
 					}
 
-					.link {
-						color: $color-text;
-						text-decoration: none;
+					&:hover {
+						.link {
+							color: $color-one-500;
+						}
+
+						.list-child {
+							.item-child {
+								.link {
+									color: $color-800;
+								}
+							}
+						}
 					}
 
 					&.item-current {
@@ -119,54 +213,101 @@
 							color: $color-one-500;
 						}
 					}
+
+					.list-child {
+						display: block;
+						background-color: $white;
+						padding: 24px;
+						padding-left: 28px;
+						border-radius: 8px;
+						border: 1px solid #D6D6D6;
+						box-shadow: 0 2px 2px rgba($black, 0.2);
+						position: absolute;
+						max-width: 180px;
+						visibility: hidden;
+						opacity: 0;
+						transition: all 0.2s ease-out;
+						z-index: 8;
+
+						&:before {
+							content: "";
+							position: absolute;
+							top: 12px;
+							bottom: 12px;
+							left: 0;
+							border-left: 4px solid $color-one-500;
+						}
+
+						.item-child {
+							&:not(:last-child) {
+								margin-bottom: 8px;
+							}
+
+							&:hover {
+								.link {
+									color: $color-one-500;
+								}
+							}
+		
+							&.item-current {
+								.link {
+									color: $color-one-500;
+								}
+							}
+						}
+					}
+
+					&:hover {
+						.list-child {
+							visibility: visible;
+							opacity: 1;
+						}
+					}
 				}
 			}
 		}
-	}
-}
 
-.domain-search {
-	margin-top: -1px;
-	background-color: #F9F9F9;
-	border-bottom: 1px solid rgba($black, 0.1);
-	padding-bottom: 12px;
-	position: relative;
-	z-index: 8;
-
-	.domain-search-form {
-		.search-field {
-			display: flex;
-
-			.input {
-				width: 100%;
-				padding: 12px;
-				border-top-left-radius: 8px;
-				border-bottom-left-radius: 8px;
-			}
-
-			.button-search {
-				padding-left: 24px;
-				padding-right: 24px;
-				border-top-right-radius: 8px;
-				border-bottom-right-radius: 8px;
-				font-size: 18px;
-				font-weight: 700;
-			}
-		}
-
-		.domain-extension {
-			.list {
-				display: flex;
-				list-style-type: none;
-				margin: 0 -12px;
-				padding: 0;
-
-				.item {
-					padding: 12px;
-
-					.label {
-						padding-left: 2px;
-						font-size: 14px;
+		.domain-search {
+			background-color: #F9F9F9;
+			padding-bottom: 12px;
+			position: relative;
+		
+			.domain-search-form {
+				.search-field {
+					display: flex;
+		
+					.input {
+						width: 100%;
+						padding: 12px;
+						border-top-left-radius: 8px;
+						border-bottom-left-radius: 8px;
+					}
+		
+					.button-search {
+						padding-left: 24px;
+						padding-right: 24px;
+						border-top-right-radius: 8px;
+						border-bottom-right-radius: 8px;
+						font-size: 18px;
+						font-weight: 700;
+					}
+				}
+		
+				.domain-extension {
+					.list {
+						display: flex;
+						list-style-type: none;
+						margin: 0 -12px;
+						padding: 0;
+		
+						.item {
+							padding: 12px;
+		
+							.label {
+								padding-left: 2px;
+								font-size: 14px;
+							}
+						}
 					}
 				}
 			}

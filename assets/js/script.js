@@ -51,4 +51,29 @@ jQuery(document).ready(function($) {
 
 	$('#mnsry_container').masonry();
 
+	$('.popup-login-toggler').mouseup('click', function() {
+		if($(this).hasClass('is-toggled')) {
+			$(this).removeClass('is-toggled');
+		}
+		else {
+			$(this).addClass('is-toggled');
+		}
+
+		return false;
+	});
+
+	function closeLogin() {
+		$('.popup-login-toggler').removeClass('is-toggled');
+	};
+
+	$(document).mouseup(function(e) {
+		var popupLogin = $(".popup-login-container");
+		var popupLoginToggler = $('.popup-login-toggler');
+		
+    // if the target of the click isn't the container nor a descendant of the container
+		if (!popupLogin.is(e.target) && popupLogin.has(e.target).length === 0 && popupLoginToggler.has(e.target).length === 0) {
+			closeLogin();
+		}
+	});
+
 });

@@ -1,0 +1,20 @@
+.popup-cart {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($black, 0.5);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  z-index: 99;
+
+  .popup-cart-container {
+    padding: 48px;
+    background-color: #F7F7F7;
+    margin-top: 100px;
+    width: 100%;
+    max-width: 640px;
+  }
+}
