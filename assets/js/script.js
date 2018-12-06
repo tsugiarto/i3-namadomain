@@ -62,18 +62,54 @@ jQuery(document).ready(function($) {
 		return false;
 	});
 
+	$('.popup-cart-toggler').mouseup('click', function() {
+		if($('.popup-cart').hasClass('is-toggled')) {
+			$('.popup-cart').removeClass('is-toggled');
+			$('body').css('overflow-y', 'auto');
+		}
+		else {
+			$('.popup-cart').addClass('is-toggled');
+			$('body').css('overflow-y', 'hidden');
+		}
+
+		return false;
+	});
+
 	function closeLogin() {
 		$('.popup-login-toggler').removeClass('is-toggled');
+	};
+
+	function closeCart() {
+		$('.popup-cart').removeClass('is-toggled');
+		$('body').css('overflow-y', 'auto');
 	};
 
 	$(document).mouseup(function(e) {
 		var popupLogin = $(".popup-login-container");
 		var popupLoginToggler = $('.popup-login-toggler');
+
+		var popupCart = $(".popup-cart-container");
+		var popupCartToggler = $('.popup-cart-toggler');
 		
     // if the target of the click isn't the container nor a descendant of the container
 		if (!popupLogin.is(e.target) && popupLogin.has(e.target).length === 0 && popupLoginToggler.has(e.target).length === 0) {
 			closeLogin();
 		}
+		if (!popupCart.is(e.target) && popupCart.has(e.target).length === 0 && popupCartToggler.has(e.target).length === 0) {
+			closeCart();
+		}
+	});
+
+	function cartHeight() {
+		var winHeight = $(window).height();
+
+		$(".popup-cart-container").css('min-height', winHeight + 'px');
+	}
+
+	cartHeight();
+
+	$(window).resize(function() {
+		cartHeight();
 	});
 
 });
