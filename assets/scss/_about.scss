@@ -48,7 +48,7 @@
     }
   }
 
-  &.projects {
+  &.portfolio {
     padding-top: 48px;
     
     .inner {
@@ -138,6 +138,33 @@
           right: 32px;
         }
       }
+    }
+  }
+}
+
+.portfolio-single {
+  .inner {
+    margin-top: 48px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    border-top: 4px solid $color-one-500;
+  }
+
+  .heading {
+    margin-bottom: 48px;
+    text-transform: uppercase;
+  }
+
+  .content {
+    display: flex;
+    
+    .portfolio-image {
+      width: 45%;
+    }
+
+    .portfolio-post {
+      width: 55%;
+      padding-left: 48px;
     }
   }
 }

@@ -90,6 +90,9 @@ jQuery(document).ready(function($) {
 
 		var popupCart = $(".popup-cart-container");
 		var popupCartToggler = $('.popup-cart-toggler');
+
+		var ukrPurhcaseList = $('.ukr-list');
+		var ukrPurhcaseToggler = $('.ukr-selected-update');
 		
     // if the target of the click isn't the container nor a descendant of the container
 		if (!popupLogin.is(e.target) && popupLogin.has(e.target).length === 0 && popupLoginToggler.has(e.target).length === 0) {
@@ -97,6 +100,9 @@ jQuery(document).ready(function($) {
 		}
 		if (!popupCart.is(e.target) && popupCart.has(e.target).length === 0 && popupCartToggler.has(e.target).length === 0) {
 			closeCart();
+		}
+		if (!ukrPurhcaseList.is(e.target) && ukrPurhcaseList.has(e.target).length === 0 && ukrPurhcaseToggler.parent('.ukr-field').has(e.target).length === 0) {
+			ukrPurhcaseList.removeClass('is-toggled');
 		}
 	});
 
@@ -110,6 +116,37 @@ jQuery(document).ready(function($) {
 
 	$(window).resize(function() {
 		cartHeight();
+	});
+
+	$('.solution-label').on('click', function() {
+		var $container = $(this).parent('.help-solution-item');
+		var expandContainer = $(this).parent('.help-solution-item').find('.solution-expanded');
+
+		if($container.hasClass('is-toggled')) {
+			$container.removeClass('is-toggled');
+			expandContainer.slideUp(300);
+		}
+		else {
+			$container.addClass('is-toggled');
+			expandContainer.slideDown(300);
+		}
+	});
+
+	$('.ukr-selected-update').mouseup(function(e) {
+		var ukrList = $('.ukr-list');
+
+		if(ukrList.hasClass('is-toggled')) {
+			ukrList.removeClass('is-toggled')
+		}
+		else {
+			ukrList.addClass('is-toggled')
+		}
+	});
+
+	$('.ukr-purchase-input').on('change', function() {
+		var $text = $(this).parent('.ukr-item').find('.ukr-text-source').text();
+		$('.ukr-list').removeClass('is-toggled');
+		$('.ukr-selected-update').text($text);
 	});
 
 });

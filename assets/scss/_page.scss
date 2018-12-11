@@ -126,3 +126,44 @@
     }
   }
 }
+
+.page-container {
+	.inner {
+		border-top: 4px solid $color-one-500;
+		padding-top: 24px;
+	}
+
+	.page-breadcrumb {
+		margin-bottom: 48px;
+		
+		.link {
+			display: inline-block;
+
+			&:not(:last-child) {
+				&::after {
+					content: '/';
+					padding: 0 8px;
+					color: $color-text-light;
+				}
+			}
+		}
+
+		a {
+			color: $color-800;
+			text-decoration: none;
+		}
+
+		span {
+			color: $color-text-light;
+		}
+	}
+
+	.page-heading {
+		margin-bottom: 48px;
+
+		.subtitle {
+			margin-bottom: 8px;
+			color: $color-one-500;
+		}
+	}
+}

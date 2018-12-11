@@ -13,6 +13,7 @@
 	transition: all 0.2s ease-out;
 	vertical-align: middle;
 	white-space: nowrap;
+	font-weight: 700;
 
 	&:visited {
 		background-color: $color-one-500;
@@ -44,6 +45,26 @@
 
 		&:active {
 			background-color: #171818;
+		}
+	}
+
+	&.button-white {
+		border: 1px solid #8C8C8C;
+		background-color: $white;
+		color: $color-800;
+		opacity: 1;
+
+		&:visited {
+			background-color: $white;
+		}
+
+		&:hover,
+		&:focus {
+			background-color: $white;
+		}
+
+		&:active {
+			background-color: $white;
 		}
 	}
 
