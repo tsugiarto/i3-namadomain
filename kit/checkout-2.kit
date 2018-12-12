@@ -71,7 +71,8 @@
                                 </ul>
                               </div>
                               <div class="ukr-action">
-                                <button class="button button-black">Beli</button>
+                                <!-- <button class="button button-black">Beli</button> -->
+                                <a href="checkout-ukr.html" class="button button-black">Beli</a>
                               </div>
                             </div>
                             <div class="ukr-buy-desc">
@@ -83,15 +84,15 @@
                           <ul class="ukr-info-list">
                             <li class="ukr-info-item">
                               <span class="info-icon"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-info"></use></svg></span>
-                              <span class="info-link"><a href="#" class="link">Apa itu Unit Kredit Register (UKR)?</a></span>
+                              <span class="info-link"><a href="page-ukr.html" class="link">Apa itu Unit Kredit Register (UKR)?</a></span>
                             </li>
                             <li class="ukr-info-item">
                               <span class="info-icon"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-list-bullet"></use></svg></span>
-                              <span class="info-link"><a href="#" class="link">Informasi daftar harga</a></span>
+                              <span class="info-link"><a href="page-ukr-pricelist.html" class="link">Informasi daftar harga</a></span>
                             </li>
                             <li class="ukr-info-item">
                               <span class="info-icon"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-list-bullet"></use></svg></span>
-                              <span class="info-link"><a href="#" class="link">Tata cara pembayaran</a></span>
+                              <span class="info-link"><a href="page-ukr-payment.html" class="link">Tata cara pembayaran</a></span>
                             </li>
                           </ul>
                         </div>
@@ -127,13 +128,31 @@
                               <div class="options">
                                 <div class="option">
                                   <svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-list-bullet"></use></svg>
-                                  <input type="checkbox" name="name_server">
-                                  <label class="label">Name Server</label>
+                                  <div class="option-container">
+                                    <input type="checkbox" name="name_server" id="item-1-name-server" class="option-toggle">
+                                    <label class="label" for="item-1-name-server">Name Server</label>
+                                    <div class="option-expand">
+                                      <p class="desc">Secara default, domain baru akan menggunakan nameserver Namadomain. Jika kamu ingin menggunakan nameserver custom silahkan klik Edit name server.</p>
+                                      <a href="#" class="link">Edit name server</a>
+                                      <div class="form-text">
+                                        <label class="label">Name server 1</label>
+                                        <input type="text" name="name_server_1" class="input" placeholder="ns1.namadomain.com">
+                                      </div>
+                                      <div class="form-text">
+                                        <label class="label">Name server 2</label>
+                                        <input type="text" name="name_server_2" class="input" placeholder="ns2.namadomain.com">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="option-subtotal">2 UKR/yr</div>
                                 </div>
                                 <div class="option">
                                   <svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-list-bullet"></use></svg>
-                                  <input type="checkbox" name="whois_protection">
-                                  <label class="label">Whois Protection</label>
+                                  <div class="option-container">
+                                    <input type="checkbox" name="whois_protection" id="item-1-whois-protection" class="option-toggle">
+                                    <label class="label" for="item-1-whois-protection">Whois Protection</label>
+                                  </div>
+                                  <div class="option-subtotal">1 UKR/yr</div>
                                 </div>
                               </div>
                             </div>
@@ -162,13 +181,31 @@
                               <div class="options">
                                 <div class="option">
                                   <svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-list-bullet"></use></svg>
-                                  <input type="checkbox" name="name_server">
-                                  <label class="label">Name Server</label>
+                                  <div class="option-container">
+                                    <input type="checkbox" name="name_server" id="item-2-name-server" class="option-toggle">
+                                    <label class="label" for="item-2-name-server">Name Server</label>
+                                    <div class="option-expand">
+                                      <p class="desc">Secara default, domain baru akan menggunakan nameserver Namadomain. Jika kamu ingin menggunakan nameserver custom silahkan klik Edit name server.</p>
+                                      <a href="#" class="link">Edit name server</a>
+                                      <div class="form-text">
+                                        <label class="label">Name server 1</label>
+                                        <input type="text" name="name_server_1" class="input" placeholder="ns1.namadomain.com">
+                                      </div>
+                                      <div class="form-text">
+                                        <label class="label">Name server 2</label>
+                                        <input type="text" name="name_server_2" class="input" placeholder="ns2.namadomain.com">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="option-subtotal">2 UKR/yr</div>
                                 </div>
                                 <div class="option">
                                   <svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-list-bullet"></use></svg>
-                                  <input type="checkbox" name="whois_protection">
-                                  <label class="label">Whois Protection</label>
+                                  <div class="option-container">
+                                    <input type="checkbox" name="whois_protection" id="item-2-whois-protection" class="option-toggle">
+                                    <label class="label" for="item-2-whois-protection">Whois Protection</label>
+                                  </div>
+                                  <div class="option-subtotal">1 UKR/yr</div>
                                 </div>
                               </div>
                             </div>
@@ -177,11 +214,11 @@
                       </div>
                       <div class="overview-total">
                         <span class="label">Total:</span>
-                        <span class="value">3 UKR</span>
+                        <span class="value">4 UKR</span>
                       </div>
                     </div>
                     <div class="action">
-                      <a href="checkout-2.html" class="button button-black">Checkout</a>
+                      <a href="#popup-checkout" class="button button-black js-popup-link">Checkout</a>
                     </div>
                   </div>
                 </div>
@@ -192,6 +229,133 @@
 
       </div>
 
+    </div>
+  </div>
+
+  <div id="popup-checkout" class="popup-inline mfp-hide popup-checkout">
+    <div class="popup-header">
+      <h1 class="title">Apakah anda sudah yakin untuk membeli domain ini? </h1>
+    </div>
+    <div class="popup-content">
+      <h3 class="heading">Order Summary:</h3>
+      <div class="overview-list">
+        <div class="overview-item">
+          <div class="overview-item-number">1.</div>
+          <div class="overview-item-frame">
+            <div class="item-detail">
+              <div class="overview-product">
+                <h4 class="product-name">.PH (.NET.PH) Domain Registration</h4>
+                <p class="product-desc">good.net.ph</p>
+                <div class="active-period-field">
+                  <select class="input" name="domain_period">
+                    <option>1 tahun</option>
+                    <option>2 tahun</option>
+                  </select>
+                </div>
+              </div>
+              <div class="overview-subtotal">
+                <h4 class="ukr-subtotal">2 UKR</h4>
+                <a href="#" class="overview-remove" title="Remove"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-trash"></use></svg></a>
+              </div>
+            </div>
+            <div class="item-option">
+              <div class="options">
+                <div class="option">
+                  <svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-list-bullet"></use></svg>
+                  <div class="option-container">
+                    <input type="checkbox" name="name_server" id="item-1-name-server" class="option-toggle" checked>
+                    <label class="label" for="item-1-name-server">Name Server</label>
+                    <div class="option-expand">
+                      <p class="desc">Secara default, domain baru akan menggunakan nameserver Namadomain. Jika kamu ingin menggunakan nameserver custom silahkan klik Edit name server.</p>
+                      <a href="#" class="link">Edit name server</a>
+                      <div class="form-text">
+                        <label class="label">Name server 1</label>
+                        <input type="text" name="name_server_1" class="input" placeholder="ns1.namadomain.com">
+                      </div>
+                      <div class="form-text">
+                        <label class="label">Name server 2</label>
+                        <input type="text" name="name_server_2" class="input" placeholder="ns2.namadomain.com">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="option-subtotal">2 UKR/yr</div>
+                </div>
+                <div class="option">
+                  <svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-list-bullet"></use></svg>
+                  <div class="option-container">
+                    <input type="checkbox" name="whois_protection" id="item-1-whois-protection" class="option-toggle" checked>
+                    <label class="label" for="item-1-whois-protection">Whois Protection</label>
+                  </div>
+                  <div class="option-subtotal">1 UKR/yr</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="overview-item">
+          <div class="overview-item-number">2.</div>
+          <div class="overview-item-frame">
+            <div class="item-detail">
+              <div class="overview-product">
+                <h4 class="product-name">.PH (.NET.PH) Domain Registration</h4>
+                <p class="product-desc">good.net.ph</p>
+                <div class="active-period-field">
+                  <select class="input" name="domain_period">
+                    <option>1 tahun</option>
+                    <option>2 tahun</option>
+                  </select>
+                </div>
+              </div>
+              <div class="overview-subtotal">
+                <h4 class="ukr-subtotal">2 UKR</h4>
+                <a href="#" class="overview-remove" title="Remove"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-trash"></use></svg></a>
+              </div>
+            </div>
+            <div class="item-option">
+              <div class="options">
+                <div class="option">
+                  <svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-list-bullet"></use></svg>
+                  <div class="option-container">
+                    <input type="checkbox" name="name_server" id="item-2-name-server" class="option-toggle">
+                    <label class="label" for="item-2-name-server">Name Server</label>
+                    <div class="option-expand">
+                      <p class="desc">Secara default, domain baru akan menggunakan nameserver Namadomain. Jika kamu ingin menggunakan nameserver custom silahkan klik Edit name server.</p>
+                      <a href="#" class="link">Edit name server</a>
+                      <div class="form-text">
+                        <label class="label">Name server 1</label>
+                        <input type="text" name="name_server_1" class="input" placeholder="ns1.namadomain.com">
+                      </div>
+                      <div class="form-text">
+                        <label class="label">Name server 2</label>
+                        <input type="text" name="name_server_2" class="input" placeholder="ns2.namadomain.com">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="option-subtotal">2 UKR/yr</div>
+                </div>
+                <div class="option">
+                  <svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-list-bullet"></use></svg>
+                  <div class="option-container">
+                    <input type="checkbox" name="whois_protection" id="item-2-whois-protection" class="option-toggle">
+                    <label class="label" for="item-2-whois-protection">Whois Protection</label>
+                  </div>
+                  <div class="option-subtotal">1 UKR/yr</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="overview-total">
+        <p>Saldo UKR anda akan terpotong sebanyak <span class="highlight">6 UKR</span></p>
+      </div>
+      <div class="terms-acceptance">
+        <p><input type="checkbox" name="terms_acceptance" id="terms-acceptance" value="1"><label class="label">Saya telah membaca dan menyetujui Syarat dan Ketentuan NamaDomain</label></p>
+      </div>
+      <div class="overview-action">
+        <a href="cart.html" class="button button-white">Kembali ke keranjang </a>
+        <a href="checkout-3.html" class="button button-black">CHECKOUT</a>
+      </div>
     </div>
   </div>
 

@@ -130,10 +130,11 @@
 .page-container {
 	.inner {
 		border-top: 4px solid $color-one-500;
-		padding-top: 24px;
+		padding-top: 48px;
 	}
 
 	.page-breadcrumb {
+		margin-top: -24px;
 		margin-bottom: 48px;
 		
 		.link {
@@ -165,5 +166,9 @@
 			margin-bottom: 8px;
 			color: $color-one-500;
 		}
+	}
+
+	.page-content {
+		padding-bottom: 48px;
 	}
 }

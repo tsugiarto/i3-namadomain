@@ -149,4 +149,28 @@ jQuery(document).ready(function($) {
 		$('.ukr-selected-update').text($text);
 	});
 
+	function checkOptionToggler() {
+		var $toggler = $('.overview-list .option-toggle:checked');
+		var optionContainer = $toggler.parents('.option');
+
+		if(optionContainer.hasClass('is-toggled')) {
+			optionContainer.removeClass('is-toggled');
+		}
+		else {
+			optionContainer.addClass('is-toggled')
+		}
+	}
+	checkOptionToggler();
+
+	$('.overview-list .option-toggle').on('change', function() {
+		var $option = $(this).parents('.option');
+
+		if($option.hasClass('is-toggled')) {
+			$option.removeClass('is-toggled');
+		}
+		else {
+			$option.addClass('is-toggled');
+		}
+	});
+
 });

@@ -1,0 +1,47 @@
+.missing-page-container {
+
+  .missing-content {
+    background: url('../../assets/images/missing-background.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 8% 0;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .title {
+      font-size: 148px;
+      line-height: 1;
+      margin-bottom: 12px;
+      color: $color-one-500;
+      padding-top: 54px;
+
+      span {
+        color: #ADACAC;
+        padding: 0 12px;
+      }
+    }
+
+    .subtitle {
+      color: #797979;
+      font-size: 32px;
+    }
+  }
+
+  .missing-footer {
+    padding-top: 32px;
+    text-align: center;
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    a {
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  }
+}
