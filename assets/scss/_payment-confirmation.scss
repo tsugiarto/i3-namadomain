@@ -1,0 +1,55 @@
+.payment-confirmation {
+  .payment-confirmation-heading {
+    margin-bottom: 48px;
+    font-size: 18px;
+  }
+
+  .payment-confirmation-form {
+    max-width: 800px;
+
+    .form {
+      .form-text {
+        display: flex;
+        align-items: flex-start;
+
+        .label {
+          width: 100%;
+          max-width: 254px;
+          padding-right: 32px;
+
+          .hint {
+            display: block;
+            padding-top: 8px;
+            font-size: 14px;
+            color: $color-400;
+            font-weight: 400;
+          }
+        }
+
+        .input {
+          padding: 6px 12px;
+          border-radius: 4px;
+
+          &.input-file {
+            padding-left: 0;
+          }
+        }
+
+        &.form-action {
+          padding-top: 12px;
+
+          .input {
+            padding-left: 0;
+
+            .button {
+              padding: 6px 12px;
+              width: 100%;
+              max-width: 180px;
+              border-radius: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

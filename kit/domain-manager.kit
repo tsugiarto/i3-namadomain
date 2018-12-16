@@ -1,6 +1,6 @@
 <!-- @import variables -->
 <!-- $domain-manager-nav: item item-current -->
-<!-- @import header -->
+<!-- @import header-logged -->
 
 			<div id="site-content" class="site-content">
 				<div class="site-content-inner">
@@ -88,7 +88,7 @@
 										<div class="other-manager">
 											<ul class="list">
 												<li class="item"><a href="#" class="link">Trade domain request</a></li>
-												<li class="item"><a href="#" class="link">Manage NS</a></li>
+												<li class="item"><a href="#popup-manage-domain" class="link js-popup-link">Manage NS</a></li>
 												<li class="item"><a href="#" class="link">Delete domain</a></li>
 											</ul>
 										</div>
@@ -99,6 +99,27 @@
 
 					</div>
 
+				</div>
+			</div>
+
+			<div id="popup-manage-domain" class="popup-inline mfp-hide popup-manage-domain">
+				<div class="popup-header">
+					<h2 class="title">Manage Name Server</h2>
+				</div>
+				<div class="popup-content">
+					<form class="form">
+						<div class="form-text">
+							<label class="label">Name server 1</label>
+							<input type="text" class="input" name="edit_nameserver_1" placeholder="ns1.namadomain.com">
+						</div>
+						<div class="form-text">
+							<label class="label">Name server 2</label>
+							<input type="text" class="input" name="edit_nameserver_2" placeholder="ns2.namadomain.com">
+						</div>
+						<div class="form-action">
+							<button class="button">Submit</button>
+						</div>
+					</form>
 				</div>
 			</div>
 

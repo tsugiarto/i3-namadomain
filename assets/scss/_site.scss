@@ -75,6 +75,14 @@
 							color: $color-one-500;
 							font-size: 18px;
 							margin-right: 8px;
+
+							&.icon-caret-down {
+								margin-right: 0;
+								font-size: 14px;
+								margin-left: 6px;
+								color: $color-800;
+								margin-bottom: -2px;
+							}
 						}
 					}
 
@@ -170,6 +178,132 @@
 					color: $color-one-500;
 
 					& + .popup-login {
+						visibility: visible;
+						opacity: 1;
+					}
+				}
+			}
+
+			.popup-account {
+				padding-top: 12px;
+				position: absolute;
+				width: 360px;
+				right: 5%;
+				visibility: hidden;
+				opacity: 0;
+				transition: all 0.2s ease-out;
+				z-index: 8;
+
+				.popup-account-container {
+					background-color: #EBEBEB;
+					border: 1px solid #CAC7C7;
+					position: relative;
+					box-shadow: 0 2px 2px rgba($black, 0.2);
+
+					.user-profile {
+						padding: 24px;
+						background-color: #E7E7E7;
+
+						.user-meta {
+							display: flex;
+							align-items: center;
+							margin-bottom: 16px;
+
+							.profile-pic {
+								width: 68px;
+								height: 68px;
+								border-radius: 50%;
+								overflow: hidden;
+								border: 2px solid $color-one-500;
+								padding: 3px;
+
+								.image {
+									width: 58px;
+									height: 58px;
+									object-fit: cover;
+									border-radius: 50%;
+								}
+							}
+
+							.profile-detail {
+								padding-left: 24px;
+
+								.name {
+									margin-bottom: 6px;
+								}
+
+								.id {
+									font-size: 14px;
+									color: #686868;
+								}
+							}
+						}
+
+						.ukr-status {
+							display: flex;
+							align-items: center;
+
+							.status {
+								color: #686868;
+								padding-right: 24px;
+								flex: 1 1 0;
+
+								.value {
+									font-weight: 700;
+								}
+							}
+
+							.action {
+								.button {
+									border-radius: 4px;
+									padding: 4px 24px;
+								}
+							}
+						}
+					}
+
+					.user-nav {
+						background-color: $white;
+						padding: 24px;
+
+						.user-nav-heading {
+							font-weight: 700;
+							margin-bottom: 24px;
+						}
+
+						.user-nav-list {
+							list-style-type: none;
+							padding-left: 0;
+							
+							.user-nav-item {
+								&:not(:last-child) {
+									margin-bottom: 8px;
+								}
+
+								.link {
+									color: $color-800;
+
+									&:hover {
+										color: $color-one-500;
+									}
+								}
+
+								&.item-current {
+									.link {
+										color: $color-one-500;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.popup-account-toggler {
+				&.link.is-toggled {
+					color: $color-one-500;
+
+					& + .popup-account {
 						visibility: visible;
 						opacity: 1;
 					}

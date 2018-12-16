@@ -175,3 +175,40 @@
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
+
+.popup-manage-domain {
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 8px;
+  padding: 32px;
+
+  .popup-header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .popup-content {
+    .form {
+
+      .label {
+        margin-bottom: 8px;
+      }
+
+      .input {
+        padding: 6px 12px;
+        border-radius: 4px;
+      }
+
+      .form-action {
+        text-align: center;
+        padding-top: 12px;
+
+        .button {
+          padding: 6px 24px;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}

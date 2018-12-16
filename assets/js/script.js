@@ -62,6 +62,17 @@ jQuery(document).ready(function($) {
 		return false;
 	});
 
+	$('.popup-account-toggler').mouseup('click', function() {
+		if($(this).hasClass('is-toggled')) {
+			$(this).removeClass('is-toggled');
+		}
+		else {
+			$(this).addClass('is-toggled');
+		}
+
+		return false;
+	});
+
 	$('.popup-cart-toggler').mouseup('click', function() {
 		if($('.popup-cart').hasClass('is-toggled')) {
 			$('.popup-cart').removeClass('is-toggled');
@@ -79,6 +90,10 @@ jQuery(document).ready(function($) {
 		$('.popup-login-toggler').removeClass('is-toggled');
 	};
 
+	function closePopupAccount() {
+		$('.popup-account-toggler').removeClass('is-toggled');
+	};
+
 	function closeCart() {
 		$('.popup-cart').removeClass('is-toggled');
 		$('body').css('overflow-y', 'auto');
@@ -87,6 +102,9 @@ jQuery(document).ready(function($) {
 	$(document).mouseup(function(e) {
 		var popupLogin = $(".popup-login-container");
 		var popupLoginToggler = $('.popup-login-toggler');
+
+		var popupAccount = $(".popup-account-container");
+		var popupAccountToggler = $('.popup-account-toggler');
 
 		var popupCart = $(".popup-cart-container");
 		var popupCartToggler = $('.popup-cart-toggler');
@@ -97,6 +115,9 @@ jQuery(document).ready(function($) {
     // if the target of the click isn't the container nor a descendant of the container
 		if (!popupLogin.is(e.target) && popupLogin.has(e.target).length === 0 && popupLoginToggler.has(e.target).length === 0) {
 			closeLogin();
+		}
+		if (!popupAccount.is(e.target) && popupAccount.has(e.target).length === 0 && popupAccountToggler.has(e.target).length === 0) {
+			closePopupAccount();
 		}
 		if (!popupCart.is(e.target) && popupCart.has(e.target).length === 0 && popupCartToggler.has(e.target).length === 0) {
 			closeCart();
@@ -171,6 +192,108 @@ jQuery(document).ready(function($) {
 		else {
 			$option.addClass('is-toggled');
 		}
+	});
+
+	$('.support-response .reply-form .form-tab').on('click', function() {
+		var $replyForm = $(this).parent('.reply-form');
+		var $expand = $replyForm.find('.form-expand');
+
+		if($replyForm.hasClass('is-toggled')) {
+			$replyForm.removeClass('is-toggled');
+			$expand.slideUp(200);
+		}
+		else {
+			$replyForm.addClass('is-toggled');
+			$expand.slideDown(200);
+		}
+	});
+
+	$('.myaccount-dashboard .domain-list .domain-list-tab').on('click', function() {
+		var $parent = $(this).parent('.domain-list');
+		var $expand = $parent.find('.domain-list-content');
+
+		if($parent.hasClass('is-toggled')) {
+			$parent.removeClass('is-toggled');
+			$expand.slideUp(200);
+		}
+		else {
+			$parent.addClass('is-toggled');
+			$expand.slideDown(200);
+		}
+	});
+
+	$('.info-edit-toggler').on('click', function() {
+		$('.user-profile-info').addClass('edit-toggled');
+
+		return false;
+	});
+
+	$('.info-edit-close').on('click', function() {
+		$('.user-profile-info').removeClass('edit-toggled');
+
+		return false;
+	});
+
+	$('.order-history-table .table-filter .filter-tab').on('click', function() {
+		var $parent = $(this).parent('.table-filter');
+		var $expand = $parent.find('.filter-form');
+
+		if($parent.hasClass('is-toggled')) {
+			$parent.removeClass('is-toggled');
+			$expand.slideUp(200);
+		}
+		else {
+			$parent.addClass('is-toggled');
+			$expand.slideDown(200);
+		}
+	});
+
+	$('.form-edit-toggle .form-edit-toggle-open').on('click', function() {
+		var $parent = $(this).parents('.form-edit-toggle');
+
+		$parent.addClass('is-toggled');
+
+		return false;
+	});
+
+	$('.form-edit-toggle .form-edit-toggle-close').on('click', function() {
+		var $parent = $(this).parents('.form-edit-toggle');
+
+		$parent.removeClass('is-toggled');
+
+		return false;
+	});
+	
+	$('.logbook-check-all').on('click', function() {
+		var $check = $(this);
+
+		if($check.hasClass('is-toggled')) {
+			$check.removeClass('is-toggled');
+			$('.logbook-check').prop('checked', false);
+		}
+		else {
+			$check.addClass('is-toggled');
+			$('.logbook-check').prop('checked', true);
+		}
+	});
+
+	function detectLogCheck() {
+		var logBookCheck = $('.logbook-check');
+		var $checked = $('.logbook-check:checked');
+		var checkAll = $('.logbook-check-all');
+
+		if(logBookCheck.length > $checked.length) {
+			checkAll.removeClass('is-toggled');
+			checkAll.prop('checked', false);
+		}
+		else {
+			checkAll.addClass('is-toggled');
+			checkAll.prop('checked', true);
+		}
+	}
+
+	$('.logbook-check').on('click', function() {
+		detectLogCheck();
 	});
 
 });

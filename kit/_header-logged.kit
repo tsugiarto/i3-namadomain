@@ -43,26 +43,41 @@
 							</ul>
 							<ul class="list">
 								<li class="item">
-									<a href="#" class="link popup-login-toggler"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-user"></use></svg> Login</a>
-									<div class="popup-login">
-										<div class="popup-login-container">
-											<form class="form">
-												<div class="form-text">
-													<label class="label">Username:</label>
-													<input type="text" name="login_username" class="input">
+									<a href="#" class="link popup-account-toggler">
+										<svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-user"></use></svg>
+										John Doe
+										<svg class="icon icon-caret-down" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-caret-down"></use></svg>
+									</a>
+									<div class="popup-account">
+										<div class="popup-account-container">
+											<div class="user-profile">
+												<div class="user-meta">
+													<div class="profile-pic">
+														<img src="assets/images/80x80.png" alt="" class="image">
+													</div>
+													<div class="profile-detail">
+														<h3 class="name">John Doe</h3>
+														<p class="id">Member #: 39103747</p>
+													</div>
 												</div>
-												<div class="form-text">
-													<label class="label">Password:</label>
-													<input type="password" name="login_password" class="input">
+												<div class="ukr-status">
+													<div class="status">
+														<span class="label">Saldo UKR anda  : </span>
+														<span class="value">4 UKR</span>
+													</div>
+													<div class="action">
+														<a href="#" class="button">Top Up</a>
+													</div>
 												</div>
-												<div class="form-action">
-													<!-- <button type="submit" class="button">Login</button> -->
-													<a href="myaccount-dashboard.html" class="button">Login</a>
-													<a href="reset-password.html" class="forgot-password-link">Forgot your password?</a>
-												</div>
-											</form>
-											<div class="sign-up-link">
-												<p>Donn't have a account? <a href="signup.html">Sign Up</a></p>
+											</div>
+											<div class="user-nav">
+												<p class="user-nav-heading">ACCOUNT</p>
+												<ul class="user-nav-list">
+													<li class="user-nav-item"><a href="domain-manager.html" class="link">My Domains</a></li>
+													<li class="user-nav-item"><a href="myaccount-dashboard.html" class="link">Account Settings</a></li>
+													<li class="user-nav-item"><a href="#" class="link">UKR</a></li>
+													<li class="user-nav-item"><a href="index.html" class="link">Log Out</a></li>
+												</ul>
 											</div>
 										</div>
 									</div>
@@ -91,6 +106,34 @@
 								<li class="<!-- $contact-nav -->"><a href="contact.html" class="link">Contact Us</a></li>
 							</ul>
 						</nav>
+						<div class="domain-search">
+							<form class="domain-search-form">
+								<div class="search-field">
+									<input type="text" class="input" placeholder="Find you perfect domain name">
+									<button type="submit" class="button button-search">Search Domain</button>
+								</div>
+								<div class="domain-extension">
+									<ul class="list">
+										<li class="item">
+											<input type="checkbox" name="extension" id="extension-com" class="type-input" value=".com">
+											<label class="label" for="extension-com">.com</label>
+										</li>
+										<li class="item">
+											<input type="checkbox" name="extension" id="extension-net" class="type-input" value=".net">
+											<label class="label" for="extension-net">.net</label>
+										</li>
+										<li class="item">
+											<input type="checkbox" name="extension" id="extension-id" class="type-input" value=".id">
+											<label class="label" for="extension-id">.id</label>
+										</li>
+										<li class="item">
+											<input type="checkbox" name="extension" id="extension-coid" class="type-input" value=".co.id">
+											<label class="label" for="extension-coid">.co.id</label>
+										</li>
+									</ul>
+								</div>
+							</form>		
+						</div>
 					</div>
 				</div>
 			</header>

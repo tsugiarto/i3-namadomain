@@ -1,0 +1,83 @@
+<!-- @import variables -->
+<!-- @import header -->
+
+<div id="site-content" class="site-content">
+  <div class="site-content-inner">
+
+    <div class="main-content" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+
+      <div class="page-container">
+        <div class="wrapper">
+          <div class="inner">
+            <div class="page-heading">
+              <h1 class="title">Payment Confirmation</h1>
+            </div>
+            <div class="page-content">
+              <div class="payment-confirmation">
+                <div class="payment-confirmation-heading">
+                  <p><strong>Hello John Doe,</strong><br> Anda dapat konfirmasi pembayaran Anda melalui isian form dibawah ini:</p>
+                </div>
+                <div class="payment-confirmation-form">
+                  <form class="form">
+                    <div class="form-text">
+                      <label class="label">Pemilik Rekening</label>
+                      <input type="text" class="input" name="account_owner">
+                    </div>
+                    <div class="form-text">
+                      <label class="label">Transfer Sebesar</label>
+                      <input type="text" class="input" name="transfer_amount">
+                    </div>
+                    <div class="form-text">
+                      <label class="label">Tanggal Pembayaran</label>
+                      <input type="text" class="input" name="payment_date">
+                    </div>
+                    <div class="form-text">
+                      <label class="label">Dibayar Melalui</label>
+                      <select class="input" name="transfer_from">
+                        <option value="">Kartu Kredit - Visa,Mastercard</option>
+                      </select>
+                    </div>
+                    <div class="form-text">
+                      <label class="label">Kode Transaksi</label>
+                      <input type="text" class="input" name="transaction_id">
+                    </div>
+                    <div class="form-text">
+                      <label class="label">
+                        Bukti Transfer
+                        <span class="hint">Scan bukti transfer/setor & upload</span>
+                      </label>
+                      <input type="file" class="input input-file" name="attachment">
+                    </div>
+                    <div class="form-text">
+                      <label class="label">Untuk Pembelian</label>
+                      <select class="input" name="payment_from">
+                        <option value="">-Pilih salah satu-</option>
+                      </select>
+                    </div>
+                    <div class="form-text">
+                      <label class="label">
+                        Keterangan
+                        <span class="hint">Keterangan tambahan jika ada. Atau jika anda mencantumkan berita transfer silahkan sertakan disini.</span>
+                      </label>
+                      <textarea class="input" rows="5" name="notes"></textarea>
+                    </div>
+                    <div class="form-text form-action">
+                      <label class="label"></label>
+                      <div class="input">
+                        <button class="button" type="submit">Konfirmasi</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- @import footer -->
