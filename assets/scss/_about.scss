@@ -102,13 +102,26 @@
         display: flex;
         align-items: center;
         background-color: rgba($color-one-500, 0.7);
-        max-width: 540px;
+        max-width: 320px;
         padding: 24px 48px;
+        font-size: 14px;
 
         .text {
           color: $white;
           line-height: 1.8;
-          font-size: 18px;
+        }
+
+        @include breakpoint(crawler) {
+          max-width: 400px;
+          font-size: 16px;
+        }
+
+        @include breakpoint(walker) {
+          max-width: 540px;
+
+          .text {
+            font-size: 18px;
+          }
         }
       }
     }
@@ -156,15 +169,28 @@
   }
 
   .content {
-    display: flex;
     
     .portfolio-image {
-      width: 45%;
+      width: 100%;
+      margin-bottom: 32px;
     }
 
     .portfolio-post {
-      width: 55%;
-      padding-left: 48px;
+      width: 100%;
+    }
+
+    @include breakpoint(walker) {
+      display: flex;
+
+      .portfolio-image {
+        width: 45%;
+        margin-bottom: 0;
+      }
+  
+      .portfolio-post {
+        width: 55%;
+        padding-left: 48px;
+      }
     }
   }
 }

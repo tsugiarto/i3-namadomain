@@ -34,14 +34,14 @@
 
     .content {
       .form {
-        display: flex;
 
         .form-label {
           width: 100%;
           max-width: 148px;
           padding-right: 24px;
-          padding-top: 8px;
           font-weight: 700;
+          margin-bottom: 12px;
+          display: block;
         }
 
         .form-field {
@@ -82,6 +82,15 @@
             }
           }
         }
+
+        @include breakpoint(crawler) {
+          display: flex;
+
+          .form-label {
+            margin-bottom: 0;
+            padding-top: 8px;
+          }
+        }
       }
     }
   }
@@ -107,10 +116,14 @@
       .whois-container {
         background-color: $white;
         border-radius: 12px;
-        padding: 48px;
+        padding: 32px;
         border: 1px solid #CCC;
         box-shadow: 0 2px 2px rgba($black, 0.2);
         position: relative;
+
+        @include breakpoint(crawler) {
+          padding: 48px;
+        }
       }
     }
   }

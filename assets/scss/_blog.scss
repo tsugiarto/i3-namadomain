@@ -12,7 +12,6 @@
     }
 
     .blog-filter-form {
-      display: flex;
       align-items: center;
 
       .label {
@@ -20,6 +19,8 @@
         width: 100%;
         max-width: 124px;
         font-weight: 700;
+        margin-bottom: 12px;
+        display: block;
       }
 
       .filter-field {
@@ -38,6 +39,14 @@
           width: 164px;
           border-top-right-radius: 4px;
           border-bottom-right-radius: 4px;
+        }
+      }
+
+      @include breakpoint(crawler) {
+        display: flex;
+
+        .label {
+          margin-bottom: 0;
         }
       }
     }
@@ -85,8 +94,18 @@
     }
 
     .blog-list {
+      justify-content: center;
+
       .blog-item {
-        width: 33.333333%;
+        width: 100%;
+
+        @include breakpoint(creeper) {
+          width: 50%;
+        }
+
+        @include breakpoint(crawler) {
+          width: 33.333333%;
+        }
       }
     }
   }
@@ -97,18 +116,15 @@
     .inner {
       padding-top: 64px;
       padding-bottom: 64px;
-      display: flex;
     }
 
     .blog-list {
-      width: 100%;
+      margin: -12px -12px 48px;
     }
 
     .top-article {
       width: 100%;
-      max-width: 320px;
       padding-left: 32px;
-      margin-left: 32px;
       border-left: 4px solid #D6D6D6;
 
       .heading {
@@ -130,6 +146,22 @@
             }
           }
         }
+      }
+    }
+
+    @include breakpoint(runner) {
+
+      .blog-list {
+        margin-bottom: 0;
+      }
+
+      .inner {
+        display: flex;
+      }
+
+      .top-article {
+        max-width: 320px;
+        margin-left: 32px;
       }
     }
   }
@@ -214,7 +246,7 @@
     flex-wrap: wrap;
 
     .related-item {
-      width: 25%;
+      width: 100%;
       padding: 24px;
       border-left: 3px solid #686868;
 
@@ -225,6 +257,18 @@
           color: $color-text-light;
           margin-bottom: 8px;
         }
+      }
+    }
+
+    @include breakpoint(crawler) {
+      .related-item {
+        width: 50%;
+      }
+    }
+
+    @include breakpoint(runner) {
+      .related-item {
+        width: 25%;
       }
     }
   }

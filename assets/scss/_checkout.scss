@@ -6,17 +6,16 @@
   }
 
   .checkout-page-heading {
-    display: flex;
     margin-bottom: 48px;
 
     .heading {
       width: 100%;
       max-width: 240px;
+      margin-bottom: 48px;
     }
 
     .checkout-step {
       width: 100%;
-      padding-left: 32px;
 
       .step-container {
         display: flex;
@@ -30,23 +29,23 @@
           position: absolute;
           height: 3px;
           background-color: $color-300;
-          top: 24px;
+          top: 16px;
         }
 
         .step {
           text-align: center;
           background-color: $white;
           position: relative;
-          min-width: 96px;
+          min-width: 76px;
 
           .step-icon {
             display: inline-block;
-            width: 48px;
-            height: 48px;
+            width: 36px;
+            height: 36px;
             padding: 4px 0 0;
             border-radius: 50%;
             background-color: $color-200;
-            font-size: 24px;
+            font-size: 18px;
             margin-bottom: 12px;
           }
 
@@ -59,14 +58,44 @@
         }
       }
     }
+
+    @include breakpoint(walker) {
+      display: flex;
+
+      .heading {
+        margin-bottom: 0;
+      }
+
+      .checkout-step {
+        padding-left: 32px;
+
+        .step-container {
+
+          &:before {
+            top: 24px;
+          }
+          
+          .step {
+            min-width: 96px;
+
+            .step-icon {
+              width: 48px;
+              height: 48px;
+              font-size: 24px;
+            }
+          }
+        }
+        
+      }
+    }
   }
 
   .checkout-page-content {
     .checkout-split-content {
-      display: flex;
 
       .checkout-main {
-        width: 50%;
+        width: 100%;
+        margin-bottom: 48px;
 
         .heading {
           margin-bottom: 32px;
@@ -76,6 +105,7 @@
       .checkout-signin {
         padding: 32px;
         background-color: #F7F7F7;
+        margin-bottom: 48px;
 
         .checkout-signin-heading {
           margin-bottom: 32px;
@@ -110,8 +140,7 @@
       }
 
       .checkout-overview {
-        width: 50%;
-        padding-left: 48px;
+        width: 100%;
 
         .heading {
           margin-bottom: 32px;
@@ -323,6 +352,24 @@
           }
         }
       }
+
+      @include breakpoint(runner) {
+        display: flex;
+
+        .checkout-main {
+          width: 50%;
+          margin-bottom: 0;
+        }
+
+        .checkout-signin {
+          margin-bottom: 0;
+        }
+
+        .checkout-overview {
+          width: 50%;
+          padding-left: 48px;
+        }
+      }
     }
 
     .checkout-ukr-container {
@@ -358,7 +405,6 @@
         }
 
         .ukr-payment-method {
-          display: flex;
           margin-bottom: 32px;
 
           .label {
@@ -367,11 +413,12 @@
             font-size: 24px;
             width: 100%;
             max-width: 280px;
+            display: inline-block;
+            margin-bottom: 12px;
           }
 
           .ukr-payment-field {
             width: 100%;
-            display: flex;
 
             .payment-input {
               width: 100%;
@@ -388,9 +435,26 @@
             .payment-partner {
               width: 100%;
               margin: -4px;
+              padding-top: 12px;
 
               img {
                 margin: 4px;
+              }
+            }
+          }
+
+          @include breakpoint(walker) {
+            display: flex;
+
+            .label {
+              margin-bottom: 0;
+            }
+
+            .ukr-payment-field {
+              display: flex;
+
+              .payment-partner {
+                padding-top: 0;
               }
             }
           }
@@ -504,7 +568,11 @@
       }
 
       .checkout-ukr-complete {
-        padding: 48px;
+        padding: 32px;
+
+        @include breakpoint(crawler) {
+          padding: 48px;
+        }
 
         .heading {
           margin-bottom: 48px;
@@ -548,12 +616,27 @@
 .popup-checkout {
   max-width: 768px;
   margin: 0 auto;
-  padding: 48px;
+  padding: 28px;
   position: relative;
 
   .popup-header {
     text-align: center;
     margin-bottom: 48px;
+
+    .title {
+      font-size: 24px;
+    }
+  }
+
+  @include breakpoint(crawler) {
+    padding: 48px;
+
+    .popup-header {
+
+      .title {
+        font-size: 32px;
+      }
+    }
   }
 
   .popup-content {
@@ -575,9 +658,9 @@
       .overview-item-number {
         font-size: 18px;
         font-weight: 700;
-        padding-right: 24px;
+        padding-right: 16px;
         width: 100%;
-        max-width: 48px;
+        max-width: 38px;
         padding-top: 64px;
       }
 
@@ -778,12 +861,16 @@
   }
 
   .checkout-complete-content {
-    padding: 48px;
+    padding: 32px;
     background-color: #F7F7F7;
+
+    @include breakpoint(crawler) {
+      padding: 48px;
+    }
 
     .transaction-status-link {
       text-align: right;
-      padding-bottom: 12px;
+      padding-bottom: 24px;
       margin-top: -24px;
       margin-right: -12px;
     }

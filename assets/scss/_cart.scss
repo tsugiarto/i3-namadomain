@@ -11,6 +11,11 @@
   overflow-y: auto;
   overflow-x: hidden;
   transition: all 0.3s ease-out;
+  display: none;
+
+  @include breakpoint(walker) {
+    display: block;
+  }
 
   &.is-toggled {
     visibility: visible;
@@ -174,11 +179,16 @@
       }
 
       .cart-item-number {
-        font-size: 18px;
         font-weight: 700;
-        padding-right: 24px;
+        padding-right: 16px;
+        max-width: 38px;
         width: 100%;
-        max-width: 64px;
+
+        @include breakpoint(crawler) {
+          max-width: 64px;
+          padding-right: 24px;
+          font-size: 18px;
+        }
       }
 
       .cart-item-frame {
@@ -194,6 +204,7 @@
 
           .product-name {
             margin-bottom: 8px;
+            font-size: 16px;
           }
 
           .product-desc {
@@ -205,6 +216,12 @@
               width: 100%;
               max-width: 240px;
               border-radius: 6px;
+            }
+          }
+
+          @include breakpoint(crawler) {
+            .product-name {
+              font-size: 18px;
             }
           }
         }
@@ -241,7 +258,7 @@
   }
 
   .cart-total {
-    width: calc(100% - 64px);
+    width: calc(100% - 38px);
     margin-top: 32px;
     border-top: 2px solid $color-one-500;
     border-bottom: 2px solid $color-one-500;
@@ -251,6 +268,10 @@
     margin-left: auto;
     font-size: 24px;
     font-weight: 700;
+
+    @include breakpoint(crawler) {
+      width: calc(100% - 64px);
+    }
 
     .label {
       width: 50%;

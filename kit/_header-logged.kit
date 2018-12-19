@@ -28,9 +28,13 @@
 
 	<body class="is-loading">
 		<div id="site-container" class="site-container">
+
 			<header id="site-header" class="site-header" role="banner">
 				<div class="site-header-top">
 					<div class="inner wrapper">
+						<div class="mobile-menu-toggle">
+							<a href="#" class="mobile-menu-toggler"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-hamburger"></use></svg></a>
+						</div>
 						<div class="header-top-logo">
 							<a class="site-logo" href="index.html" rel="nofollow">
 								<img src="assets/images/site-logo.svg" alt="Damadomain Logo">
@@ -83,6 +87,10 @@
 									</div>
 								</li>
 								<li class="item"><a href="#" class="link popup-cart-toggler"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-cart"></use></svg> Cart</a></li>
+							</ul>
+							<ul class="list mobile-header-nav">
+								<li class="item"><a href="myaccount-dashboard.html" class="link"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-user"></use></svg> John Doe</a></li>
+								<li class="item"><a href="cart.html" class="link"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-cart"></use></svg> Cart</a></li>
 							</ul>
 						</div>
 					</div>
@@ -137,7 +145,7 @@
 					</div>
 				</div>
 			</header>
-
+	
 			<div class="popup-cart">
 				<div class="popup-cart-container">
 					<div class="heading">
@@ -191,6 +199,45 @@
 						</div>
 						<div class="cart-action">
 							<a href="checkout-1.html" class="button">Checkout</a>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+			<div class="mobile-menu">
+				<div class="mobile-menu-container">
+					<div class="mobile-menu-heading">
+						<h5 class="title">MENU</h5>
+						<a href="#" class="mobile-menu-close" title="Close"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-times"></use></svg></a>
+					</div>
+					<div class="mobile-menu-nav">
+						<div class="nav-section">
+							<ul class="list">
+								<li class="<!-- $domain-nav -->"><a href="domain.html" class="link">Domains</a></li>
+								<li class="<!-- $hosting-nav -->"><a href="hosting.html" class="link">Hosting</a></li>
+								<li class="<!-- $help-nav -->"><a href="help.html" class="link">Help Center</a></li>
+								<li class="<!-- $other-service-nav -->">
+									<a href="other-service.html" class="link">
+										Other Services
+										<span class="child-menu-toggle">
+											<svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-down"></use></svg>
+										</span>
+									</a>
+									<ul class="list-child">
+										<li class="item-child"><a href="" class="link">Branding</a></li>
+										<li class="item-child"><a href="" class="link">Website Development</a></li>
+									</ul>
+								</li>
+								<li class="<!-- $blog-nav -->"><a href="blog.html" class="link">Blog</a></li>
+								<li class="<!-- $about-nav -->"><a href="about.html" class="link">About Us</a></li>
+								<li class="<!-- $contact-nav -->"><a href="contact.html" class="link">Contact Us</a></li>
+							</ul>
+						</div>
+						<div class="nav-section">
+							<ul class="list">
+								<li class="<!-- $whois-nav -->"><a href="whois.html" class="link">Whois</a></li>
+								<li class="<!-- $domain-manager-nav -->"><a href="domain-manager.html" class="link">Domain Manager</a></li>
+							</ul>
 						</div>
 					</div>
 				</div>

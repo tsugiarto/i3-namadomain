@@ -9,9 +9,13 @@
     }
 
     .item-container {
-      padding: 48px;
+      padding: 32px;
       background-color: #F7F7F7;
       box-shadow: 0 2px 2px rgba($black, 0.2);
+
+      @include breakpoint(crawler) {
+        padding: 48px;
+      }
 
       &.domain-period {
         display: flex;
@@ -19,6 +23,7 @@
 
         .domain-period-detail {
           flex: 1 1 0;
+          padding-right: 28px;
         }
 
         .domain-period-action {
@@ -27,9 +32,12 @@
 
           .link {
             color: $color-800;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
 
             .icon {
-              font-size: 32px;
+              font-size: 24px;
               margin-right: 12px;
             }
           }

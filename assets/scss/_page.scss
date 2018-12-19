@@ -102,7 +102,7 @@
   }
 
   .inner {
-    min-height: 480px;
+    min-height: 320px;
     display: flex;
     align-items: center;
     padding-top: 32px;
@@ -116,15 +116,33 @@
 
     .heading {
       .subtitle {
-        font-size: 24px;
+        font-size: 18px;
         margin-bottom: 24px;
       }
 
       .title {
-        font-size: 40px;
+        font-size: 32px;
       }
     }
-  }
+	}
+	
+	@include breakpoint(walker) {
+		.inner {
+			min-height: 480px;
+		}
+
+		.page-hero-container {
+			.heading {
+				.subtitle {
+					font-size: 24px;
+				}
+	
+				.title {
+					font-size: 40px;
+				}
+			}
+		}
+	}
 }
 
 .page-container {

@@ -2,13 +2,17 @@
   
 
   .login-frame {
-    padding: 48px;
+    padding: 32px;
     border-radius: 8px;
     border: 1px solid #CCC;
     box-shadow: 0 2px 2px rgba($black, 0.2);
     max-width: 640px;
     margin: 0 auto;
     position: relative;
+
+    @include breakpoint(crawler) {
+      padding: 48px;
+    }
 
     &:before {
       content: "";
@@ -40,6 +44,12 @@
         width: 100%;
         padding: 8px 12px;
         border-radius: 6px;
+      }
+
+      .forgot-password-link {
+        display: inline-block;
+        margin-top: 12px;
+        margin-bottom: 16px;
       }
     }
   }
@@ -86,8 +96,12 @@
     }
 
     .user-profile-info {
-      padding: 48px;
+      padding: 32px;
       background-color: #F7F7F7;
+
+      @include breakpoint(crawler) {
+        padding: 48px;
+      }
 
       .profile-preview {
         display: flex;
@@ -99,7 +113,7 @@
           flex: 1 1 0;
   
           .item {
-            width: 33.333333%;
+            width: 100%;
             padding: 16px;
   
             .label {
@@ -130,24 +144,12 @@
 
         .form {
           display: flex;
+          flex-wrap: wrap;
           margin: -16px;
 
           .form-section {
-            width: 33.333333%;
+            width: 100%;
             padding: 16px;
-
-            .form-action {
-              padding-top: 24px;
-              display: flex;
-              margin: -12px;
-
-              .button {
-                width: calc(50% - 24px);
-                margin: 12px;
-                border-radius: 4px;
-                padding: 6px 12px;
-              }
-            }
           }
 
           .label {
@@ -157,6 +159,19 @@
           .input {
             border-radius: 4px;
             padding: 6px 12px;
+          }
+
+          .form-action {
+            width: 100%;
+            padding-top: 12px;
+
+            .button {
+              width: 100%;
+              max-width: 140px;
+              margin: 12px;
+              border-radius: 4px;
+              padding: 6px 12px;
+            }
           }
         }
       }
@@ -168,6 +183,36 @@
 
         .profile-edit {
           display: block;
+        }
+      }
+
+      @include breakpoint(crawler) {
+        .profile-preview {
+          .list {
+            .item {
+              width: 50%;
+            }
+          }
+        }
+      }
+
+      @include breakpoint(walker) {
+        .profile-preview {
+          .list {
+            .item {
+              width: 33.333333%;
+            }
+          }
+        }
+      }
+
+      @include breakpoint(runner) {
+        .profile-edit {
+          .form {
+            .form-section {
+              width: 33.333333%;
+            }
+          }
         }
       }
     }
@@ -186,7 +231,7 @@
       justify-content: center;
 
       .menu-item {
-        width: calc(33.333333% - 32px);
+        width: calc(100% - 32px);
         padding: 24px;
         margin: 16px;
         border-radius: 8px;
@@ -222,6 +267,18 @@
           top: 0;
         }
       }
+
+      @include breakpoint(crawler) {
+        .menu-item {
+          width: calc(50% - 32px);
+        }
+      }
+
+      @include breakpoint(walker) {
+        .menu-item {
+          width: calc(33.333333% - 32px);
+        }
+      }
     }
   }
 
@@ -235,7 +292,7 @@
       display: flex;
       align-items: center;
       cursor: pointer;
-      padding: 48px;
+      padding: 32px;
 
       .tab-title {
         flex: 1 1 0;
@@ -244,12 +301,12 @@
 
       .icon {
         color: $color-one-500;
-        font-size: 24px;
+        font-size: 20px;
       }
     }
 
     .domain-list-content {
-      padding: 0 48px 48px;
+      padding: 0 32px 32px;
       display: none;
 
       .list {
@@ -286,13 +343,27 @@
         }
       }
     }
+
+    @include breakpoint(crawler) {
+      .domain-list-tab {
+        padding: 48px;
+      }
+
+      .domain-list-content {
+        padding: 0 48px 48px;
+      }
+    }
   }
 
   .recomended-offer {
     border: 1px solid #CCC;
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba($black, 0.2);
-    padding: 48px;
+    padding: 32px;
+
+    @include breakpoint(crawler) {
+      padding: 48px
+    }
 
     .heading {
       border-bottom: 1px solid $color-500;
@@ -302,17 +373,16 @@
     .recomended-offer-list {
       .recomended-offer-item {
         padding: 24px;
-        display: flex;
         background-color: #F7F7F7;
         border-bottom: 1px solid $color-300;
 
         .domain-name {
           width: 100%;
-          max-width: 320px;
           font-size: 18px;
           display: flex;
           align-items: center;
           padding-right: 32px;
+          padding-bottom: 32px;
 
           .icon {
             font-size: 32px;
@@ -322,8 +392,7 @@
 
         .domain-action {
           width: 100%;
-          display: flex;
-          justify-content: flex-end;
+          justify-content: flex-start;
           align-items: center;
 
           .button {
@@ -332,8 +401,8 @@
           }
 
           span {
-            display: inline-block;
-            padding: 0 24px;
+            display: block;
+            padding: 12px 0;
           }
 
           .domain-offer-search {
@@ -356,6 +425,30 @@
             }
           }
         }
+
+        @include breakpoint(crawler) {
+          .domain-action {
+            display: flex;
+
+            span {
+              display: inline-block;
+              padding: 0 24px;
+            }
+          }
+        }
+
+        @include breakpoint(runner) {
+          display: flex;
+
+          .domain-name {
+            max-width: 320px;
+            padding-bottom: 0;
+          }
+
+          .domain-action {
+            justify-content: flex-end;
+          }
+        }
       }
     }
   }
@@ -363,12 +456,13 @@
 
 .myaccount-ukr-content {
   .ukr-status {
-    display: flex;
     margin-bottom: 48px;
     align-items: center;
 
     .ukr-status-label {
       flex: 1 1 0;
+      display: inline-block;
+      margin-bottom: 16px;
     }
 
     .ukr-status-action {
@@ -379,6 +473,14 @@
         padding: 6px 12px;
         width: 100%;
         border-radius: 6px;
+      }
+    }
+
+    @include breakpoint(crawler) {
+      display: flex;
+
+      .ukr-status-label {
+        margin-bottom: 0;
       }
     }
   }
@@ -560,13 +662,14 @@
         .filter-toggler {
           display: flex;
           align-items: center;
-          font-size: 24px;
+          font-size: 18px;
           font-weight: 700;
           justify-content: flex-end;
 
           .icon {
             color: $color-one-500;
             margin-left: 12px;
+            font-size: 16px;
 
             &.icon-angle-up {
               display: none;
@@ -582,11 +685,11 @@
         .form-checkboxes {
           display: flex;
           flex-wrap: wrap;
-          margin: -12px -24px;
+          margin: -6px -24px;
           padding-bottom: 24px;
 
           .form-checkbox {
-            padding: 12px 24px;
+            padding: 6px 24px;
             display: flex;
             align-items: flex-start;
 
@@ -908,23 +1011,44 @@
             padding-right: 32px;
 
             .social-logo {
-              max-width: 60px;
-              margin-right: 24px;
+              max-width: 32px;
+              margin-right: 12px;
             }
     
             .social-name {
               font-weight: 700;
+              font-size: 14px;
+            }
+
+            @include breakpoint(crawler) {
+              .social-logo {
+                max-width: 60px;
+                margin-right: 24px;
+              }
+
+              .social-name {
+                font-size: 16px;
+              }
             }
           }
 
           .social-action {
-            width: 100%;
-            max-width: 148px;
+            width: auto;
 
             .button {
               width: 100%;
               padding: 6px 12px;
               border-radius: 4px;
+              font-size: 14px;
+            }
+
+            @include breakpoint(crawler) {
+              width: 100%;
+              max-width: 148px;
+              
+              .button {
+                font-size: 16px;
+              }
             }
           }
         }

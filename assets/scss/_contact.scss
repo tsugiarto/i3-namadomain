@@ -26,11 +26,15 @@
 .contact-section {
   &.contact-form {
     .contact-form-frame {
-      padding: 48px;
+      padding: 32px;
       border-radius: 16px;
       background-color: #D9D9D9;
       max-width: 1024px;
       margin: 0 auto;
+
+      @include breakpoint(walker) {
+        padding: 48px;
+      }
 
       .heading {
         margin-bottom: 48px;
@@ -93,13 +97,13 @@
         }
 
         &.contact-address {
-          display: flex;
           align-items: center;
 
           .address-detail {
             width: 100%;
             padding-right: 32px;
             line-height: 1.8;
+            margin-bottom: 32px;
           }
 
           .address-map {
@@ -112,6 +116,14 @@
 
             img {
               box-shadow: 0 3px 5px rgba($black, 0.2);
+            }
+          }
+
+          @include breakpoint(crawler) {
+            display: flex;
+
+            .address-detail {
+              margin-bottom: 0;
             }
           }
         }
