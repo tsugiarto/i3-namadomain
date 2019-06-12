@@ -986,3 +986,40 @@
 		}
 	}
 }
+
+.notification {
+	margin-bottom: 32px;
+
+	&-message {
+		padding: 24px;
+		background-color:  $white;
+		box-shadow: 0 2px 2px 2px rgba($black, 0.15);
+		border-left: 5px solid $color-info-dark;
+
+		p {
+			margin-bottom: 12px;
+		}
+
+		ul {
+			padding-left: 16px;
+
+			li {
+				&:not(:last-child) {
+					margin-bottom: 4px;
+				}
+			}
+		}
+	}
+
+	&.error {
+		.notification-message {
+			border-left-color: $color-alert-dark;
+		}
+	}
+
+	&.success {
+		.notification-message {
+			border-left-color: $color-success-dark;
+		}
+	}
+}
