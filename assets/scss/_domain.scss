@@ -43,7 +43,7 @@
         font-size: 32px;
       }
     }
-    
+
     @include breakpoint(walker) {
       .heading {
         .subtitle {
@@ -67,7 +67,7 @@
             border-radius: 8px;
             margin-bottom: 12px;
           }
-    
+
           .button-search {
             padding-left: 24px;
             padding-right: 24px;
@@ -81,7 +81,7 @@
           @include breakpoint(crawler) {
             display: flex;
 
-            .input {  
+            .input {
               border-top-right-radius: 0;
               border-bottom-right-radius: 0;
               margin-bottom: 0;
@@ -100,10 +100,10 @@
             list-style-type: none;
             margin: 0 -12px;
             padding: 0;
-    
+
             .item {
               padding: 12px;
-    
+
               .label {
                 padding-left: 2px;
                 font-size: 14px;
@@ -204,6 +204,7 @@
 
   &.register {
     background-color: #F6F7F6;
+    padding-bottom: 48px;
 
     .inner {
       border-top: 4px solid $color-one-500;
@@ -285,7 +286,7 @@
     .register-info {
       padding-top: 24px;
       text-align: right;
-      
+
       .icon {
         font-size: 24px;
       }
@@ -293,6 +294,48 @@
       .link {
         padding-left: 8px;
       }
+    }
+  }
+}
+
+.section-transfer {
+  padding-top: 48px;
+}
+
+.transfer-container {
+  background-color: $white;
+  border-radius: 12px;
+  padding: 0 32px;
+  border: 1px solid #CCC;
+  box-shadow: 0 2px 2px rgba($black, 0.2);
+  position: relative;
+
+  @include breakpoint(walker) {
+    padding: 0 64px;
+  }
+
+  .inner {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .transfer-section-heading {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  .transfer-section-content {
+    color: $color-text-light;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .tranfer-section-action {
+    text-align: center;
+
+    .button {
+      border-radius: 6px;
+      padding: 10px 24px;
     }
   }
 }

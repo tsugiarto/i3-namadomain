@@ -406,3 +406,124 @@
 		margin-bottom: 16px;
 	}
 }
+
+table.table-form {
+	border: 1px solid $color-400;
+	border-right: none;
+
+	tr {
+		th, td {
+			display: block;
+			border-top: none;
+			padding-top: 8px;
+			padding-bottom: 8px;
+			padding-left: 12px;
+			padding-right: 12px;
+			text-align: left;
+			border-right: 1px solid $color-400;
+
+			&:not(:last-child) {
+				border-bottom: 1px solid $color-400;
+			}
+
+			@include breakpoint(walker) {
+				display: table-cell;
+				border-bottom: 1px solid $color-400;
+			}
+
+			&.label {
+				padding-bottom: 0;
+				line-height: 1;
+				border-bottom: none;
+				vertical-align: middle;
+
+				@include breakpoint(walker) {
+					width: 20%;
+					padding-bottom: 6px;
+					border-bottom: 1px solid $color-400;
+				}
+			}
+
+			&.field {
+				position: relative;
+				border-bottom: none;
+				vertical-align: middle;
+
+				.split-field {
+					display: flex;
+					align-items: center;
+					margin: -4px;
+
+					.input {
+						width: calc(50% - 12px);
+						margin: 4px;
+					}
+				}
+
+				&.summary {
+					padding: 8px 12px;
+					line-height: 1;
+				}
+
+				.radio-input {
+					display: flex;
+					align-items: center;
+					line-height: 1;
+
+					label {
+						padding-left: 8px;
+					}
+				}
+
+				@include breakpoint(walker) {
+					border-bottom: 1px solid $color-400;
+				}
+
+				.input {
+					width: 100%;
+					box-shadow: none;
+					border-radius: 4px;
+				}
+			}
+
+			&.hint {
+				font-size: 14px;
+				border-bottom: 1px solid $color-400;
+
+				&.hint-desktop {
+					display: none;
+				}
+
+				&.hint-mobile {
+					display: block;
+				}
+
+				@include breakpoint(walker) {
+					width: 45%;
+
+					&.hint-desktop {
+						display: table-cell;
+					}
+
+					&.hint-mobile {
+						display: none;
+					}
+				}
+			}
+		}
+
+		&:last-child {
+			.hint {
+				border-bottom: none;
+			}
+		}
+	}
+
+	thead {
+		th {
+			background-color: $color-300;
+			text-align: left;
+			border-bottom: 1px solid $color-400;
+		}
+	}
+}

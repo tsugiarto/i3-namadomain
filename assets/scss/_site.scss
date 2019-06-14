@@ -41,12 +41,17 @@
 			flex: 1 1 0;
 
 			.site-logo {
-				max-width: 148px;
+				max-width: 124px;
+				display: inline-block;
+
+				@include breakpoint(crawler) {
+					max-width: 148px;
+				}
 			}
 		}
 
 		.mobile-menu-toggle {
-			padding-right: 24px;
+			padding-right: 16px;
 			display: block;
 
 			.mobile-menu-toggler {
@@ -54,10 +59,6 @@
 				line-height: 1;
 				font-size: 24px;
 				color: $color-800;
-			}
-
-			@include breakpoint(crawler) {
-				padding-right: 32px;
 			}
 
 			@include breakpoint(walker) {
@@ -87,6 +88,15 @@
 				&.mobile-header-nav {
 					display: block;
 					padding-left: 48px;
+					margin: -2px -8px;
+
+					.item {
+						padding: 2px 8px;
+
+						.icon {
+							margin-right: 0 !important;
+						}
+					}
 				}
 
 				@include breakpoint(walker) {

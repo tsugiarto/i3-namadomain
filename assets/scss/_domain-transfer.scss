@@ -1,0 +1,231 @@
+.domain-transfer {
+	padding-top: 48px;
+
+	.inner {
+		padding-top: 48px;
+		padding-bottom: 48px;
+		border-top: 4px solid $color-one-500;
+	}
+
+	.domain-transfer-heading {
+		margin-bottom: 32px;
+	}
+
+	.domain-transfer-content {
+		margin-bottom: 24px;
+	}
+
+	.domain-transfer-form {
+		.label {
+			margin-bottom: 16px;
+		}
+
+		.form {
+			display: flex;
+			flex-wrap: wrap;
+			margin: -6px;
+
+			.form-section {
+				padding: 6px;
+
+				.input {
+					border-radius: 4px;
+					box-shadow: none;
+					border-color: $color-400;
+				}
+
+				&.form-text {
+					width: 100%;
+					margin-bottom: 0;
+
+					@include breakpoint(crawler) {
+						max-width: 320px;
+					}
+
+					.input {
+						padding: 6px 12px;
+					}
+				}
+
+				&.form-select {
+					width: 100%;
+					margin-bottom: 0;
+
+					@include breakpoint(crawler) {
+						max-width: 100px;
+					}
+
+					.input {
+						padding-top: 5px;
+						padding-bottom: 5px;
+					}
+				}
+
+				&.form-submit {
+					width: 100%;
+
+					@include breakpoint(crawler) {
+						max-width: 140px;
+					}
+
+					.button {
+						width: 100%;
+						padding: 6px 24px;
+						border-radius: 4px;
+					}
+				}
+			}
+		}
+	}
+
+	.domain-transfer-info {
+		padding-top: 24px;
+
+		.form-submit {
+			padding-top: 24px;
+
+			.button {
+				padding: 6px 32px;
+				border-radius: 4px;
+			}
+		}
+	}
+
+	.transfer-preview {
+		.transfer-preview-container {
+			max-width: 768px;
+			padding: 0 24px;
+			border-radius: 8px;
+			background-color: $white;
+			border: 1px solid $color-300;
+			box-shadow: 0 3px 3px rgba($black, 0.2);
+			margin-bottom: 48px;
+
+			@include breakpoint(walker) {
+				padding: 0 32px;
+			}
+
+			.inner {
+				width: 100%;
+				padding: 24px 0;
+				display: flex;
+				flex-wrap: wrap;
+
+				@include breakpoint(walker) {
+					padding: 32px 0;
+				}
+			}
+
+			.meta {
+				width: 100%;
+				margin-bottom: 16px;
+				padding-bottom: 24px;
+				border-bottom: 1px solid $color-300;
+
+				@include breakpoint(walker) {
+					width: 75%;
+					padding-right: 32px;
+					margin-bottom: 0;
+					padding-bottom: 0;
+					border-bottom: none;
+				}
+
+				.domain-name {
+					font-size: 20px;
+					font-weight: 700;
+					margin-bottom: 12px;
+					display: flex;
+
+					.icon-check {
+						display: block;
+						width: 20px;
+						height: 20px;
+						padding: 4px;
+						line-height: 1;
+						border-radius: 50%;
+						background-color: $color-one-500;
+						color: $white;
+						font-size: 14px;
+						margin-right: 8px;
+						margin-top: 4px;
+					}
+				}
+
+				.ep-code-field {
+					.label {
+						margin-bottom: 4px;
+						font-size: 14px;
+					}
+
+					.sublabel {
+						font-size: 13px;
+						color: $color-text-light;
+						margin-bottom: 12px;
+					}
+
+					.input {
+						width: 100%;
+						max-width: 240px;
+					}
+				}
+			}
+
+			.amount {
+				width: 100%;
+
+				@include breakpoint(walker) {
+					width: 25%;
+					text-align: right;
+				}
+
+				.label {
+					margin-bottom: 0;
+					font-size: 14px;
+					color: $color-text-light;
+				}
+
+				.value {
+					font-size: 20px;
+					color: $color-one-500;
+					font-weight: 700;
+				}
+			}
+		}
+
+		.transfer-preview-submit {
+			.button {
+				padding: 8px 32px;
+				border-radius: 4px;
+			}
+		}
+	}
+
+	.transfer-complete {
+		.transfer-complete-summary {
+			padding: 24px;
+			background-color: #F7F7F7;
+			margin-bottom: 48px;
+
+			@include breakpoint(walker) {
+				padding: 32px;
+			}
+
+			.summary {
+				margin-bottom: 24px;
+
+				p {
+					margin-bottom: 8px;
+				}
+			}
+		}
+
+		.transfer-complete-submit {
+			.button {
+				padding: 8px 32px;
+				border-radius: 4px;
+				border-color: $color-600;
+				color: $color-600;
+			}
+		}
+	}
+}
