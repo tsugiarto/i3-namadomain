@@ -1,87 +1,28 @@
-.page-navigation {
-	align-items: center;
-	border-top: 1px solid $color-border;
-	display: flex;
-	justify-content: space-between;
-	margin-top: 24px;
-	padding-top: 24px;
+.pagination {
+	width: 100%;
+	padding-top: 32px;
 
-	@at-root {
+	.items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -4px;
 
-		.page-navigation-list {
-			@include clearfix;
-			list-style: none;
-			margin: 0;
-			padding: 0;
-		}
+		.item {
+			padding: 4px;
 
-		.page-navigation-arrow {
-			@include clearfix;
-			list-style: none;
-			margin: 0;
-			padding: 0;
+			.a {
+				display: block;
+				min-width: 32px;
+				text-align: center;
+				padding: 4px 8px;
+				background-color: $color-one-500;
+				color: $white;
+			}
 
-			.link {
-				height: 32px;
-				padding: 0;
-				width: 32px;
+			span.a {
+				cursor: default;
 			}
 		}
-	}
-
-	.link {
-		background-color: $color-one-500;
-		border-radius: 4px;
-		color: $white;
-		display: block;
-		min-width: 32px;
-		padding: 4px 8px;
-		position: relative;
-		text-align: center;
-		text-decoration: none;
-		transition: all 0.2s ease-out;
-
-		&:hover,
-		&:focus {
-			background-color: $color-one-400;
-			color: $white;
-		}
-	}
-
-	.item {
-		float: left;
-		margin-right: 4px;
-
-		&:last-child {
-			margin-right: 0;
-		}
-
-		&.item-current {
-
-			.link {
-				background-color: $color-500;
-				pointer-events: none;
-
-				&:hover,
-				&:focus {
-					background-color: $color-500;
-				}
-			}
-		}
-
-		&.item-inactive {
-
-			.link {
-				background-color: $color-one-300;
-				pointer-events: none;
-			}
-		}
-	}
-
-	.icon {
-		fill: $white;
-		height: 100%;
-		width: 24px;
 	}
 }
 
@@ -125,7 +66,7 @@
       }
     }
 	}
-	
+
 	@include breakpoint(walker) {
 		.inner {
 			min-height: 480px;
@@ -136,7 +77,7 @@
 				.subtitle {
 					font-size: 24px;
 				}
-	
+
 				.title {
 					font-size: 40px;
 				}
@@ -154,7 +95,7 @@
 	.page-breadcrumb {
 		margin-top: -24px;
 		margin-bottom: 48px;
-		
+
 		.link {
 			display: inline-block;
 
@@ -187,6 +128,6 @@
 	}
 
 	.page-content {
-		
+
 	}
 }

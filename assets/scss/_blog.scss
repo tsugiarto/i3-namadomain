@@ -58,8 +58,12 @@
     margin: -12px;
 
     .blog-item {
-      width: 50%;
+      width: 100%;
       padding: 12px;
+
+      @include breakpoint(creeper) {
+        width: 50%;
+      }
 
       a {
         color: $color-800;
@@ -75,7 +79,7 @@
           margin-bottom: 6px;
           text-transform: uppercase;
         }
-  
+
         .title {
           margin-bottom: 6px;
         }
@@ -149,19 +153,48 @@
       }
     }
 
-    @include breakpoint(runner) {
+    .pagination {
+      width: 100%;
+      padding-top: 32px;
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-bottom: 12px;
 
-      .blog-list {
-        margin-bottom: 0;
+      .items {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -4px;
+
+        .item {
+          padding: 4px;
+
+          .a {
+            display: block;
+            min-width: 32px;
+            text-align: center;
+            padding: 4px 8px;
+            background-color: $color-one-500;
+            color: $white;
+          }
+        }
       }
+    }
+
+    @include breakpoint(runner) {
 
       .inner {
         display: flex;
+        flex-wrap: wrap;
+      }
+
+      .blog-list {
+        width: 75%;
+        margin-bottom: 0;
+        padding-right: 32px;
       }
 
       .top-article {
-        max-width: 320px;
-        margin-left: 32px;
+        width: 25%;
       }
     }
   }
@@ -306,13 +339,13 @@
 
     li {
       padding-left: 12px;
-      
+
       &:not(:last-child) {
         margin-bottom: 12px;
       }
     }
   }
-  
+
   table {
     border: 1px solid #CCC;
 
