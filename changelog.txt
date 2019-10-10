@@ -1,3 +1,7 @@
+10.10.19
++ update style.css
++ update checkout-2.html, find "Tommy 10.10.19"
+
 19.06.19
 + update style.css
 + update html pagination di blog.html, cari comment "19.06.19"

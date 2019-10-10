@@ -74,7 +74,7 @@
           &:before {
             top: 24px;
           }
-          
+
           .step {
             min-width: 96px;
 
@@ -85,7 +85,7 @@
             }
           }
         }
-        
+
       }
     }
   }
@@ -164,7 +164,7 @@
               max-width: 48px;
               padding-top: 64px;
             }
-  
+
             .overview-item-frame {
               width: 100%;
               background-color: $white;
@@ -177,15 +177,15 @@
 
                 .overview-product {
                   width: 100%;
-    
+
                   .product-name {
                     margin-bottom: 8px;
                   }
-    
+
                   .product-desc {
                     font-size: 14px;
                   }
-    
+
                   .active-period-field {
                     .input {
                       width: 100%;
@@ -194,19 +194,19 @@
                     }
                   }
                 }
-    
+
                 .overview-subtotal {
                   width: 100%;
                   max-width: 124px;
                   padding-left: 24px;
                   text-align: right;
                   position: relative;
-    
+
                   .ukr-subtotal {
                     margin-bottom: 0;
                     padding-bottom: 48px;
                   }
-    
+
                   .overview-remove {
                     display: inline-block;
                     width: 38px;
@@ -223,12 +223,12 @@
                   }
                 }
               }
-  
+
               .item-option {
                 padding-top: 24px;
                 margin-top: 24px;
                 border-top: 1px solid $color-400;
-                
+
                 .options {
                   .option {
                     display: flex;
@@ -256,7 +256,7 @@
                       padding-right: 24px;
 
                       .option-expand {
-                        padding: 12px 0 12px 28px;
+                        padding: 16px 0 12px 28px;
                         display: none;
 
                         .desc {
@@ -290,6 +290,7 @@
 
                           .input {
                             border-radius: 6px;
+                            max-width: 240px;
                           }
                         }
                       }
@@ -545,20 +546,20 @@
         .ukr-info-list {
           list-style-type: none;
           padding-left: 0;
-  
+
           .ukr-info-item {
             display: flex;
             align-items: center;
             line-height: 1;
-  
+
             &:not(:last-child) {
               margin-bottom: 6px;
             }
-  
+
             .info-icon {
               font-size: 18px;
             }
-  
+
             .info-link {
               padding-left: 12px;
               font-size: 14px;
@@ -727,7 +728,7 @@
           padding-top: 24px;
           margin-top: 24px;
           border-top: 1px solid $color-400;
-          
+
           .options {
             .option {
               display: flex;
@@ -755,7 +756,7 @@
                 padding-right: 24px;
 
                 .option-expand {
-                  padding: 12px 0 12px 28px;
+                  padding: 16px 0 12px 28px;
                   display: none;
 
                   .desc {
@@ -855,7 +856,7 @@
 }
 
 .checkout-complete {
-  
+
   .checkout-complete-heading {
     margin-bottom: 32px;
   }
