@@ -1,0 +1,224 @@
+.career {
+	padding-bottom: 24px;
+
+	&-list {
+
+		&-heading {
+			margin-bottom: 32px;
+
+			.title {
+				color: $color-one-500;
+				font-weight: 400;
+			}
+		}
+
+		&-content {
+
+			.items {
+				display: flex;
+				flex-wrap: wrap;
+				margin: -12px;
+
+				@include breakpoint(walker) {
+					margin: -16px;
+				}
+			}
+
+			.item {
+				width: calc(100% - 24px);
+				display: block;
+				padding: 16px;
+				margin: 12px;
+				border: 1px solid $color-400;
+				border-radius: 5px;
+
+				@include breakpoint(creeper) {
+					padding: 24px;
+				}
+
+				@include breakpoint(crawler) {
+					width: calc(50% - 24px);
+				}
+
+				@include breakpoint(walker) {
+					width: calc(50% - 32px);
+					padding: 32px;
+					margin: 16px;
+				}
+
+				.link {
+					display: flex;
+					min-height: 100%;
+					color: $color-text;
+					text-decoration: none;
+				}
+
+				.count {
+					display: flex;
+					color: $color-500;
+
+					&::before {
+						content: '';
+						width: 12px;
+						height: 12px;
+						border-radius: 12px;
+						background-color: $color-one-500;
+						margin-top: 6px;
+						margin-right: 12px;
+					}
+				}
+
+				.title {
+					margin-bottom: 16px;
+					color: $color-800;
+				}
+
+				.desc {
+					color: $color-600;
+				}
+			}
+		}
+	}
+
+	&-category {
+		padding: 24px;
+		border-radius: 8px;
+		border: 1px solid $color-400;
+
+		@include breakpoint(walker) {
+			padding: 32px;
+		}
+
+		@include breakpoint(runner) {
+			padding: 48px;
+		}
+
+		.count {
+			display: flex;
+			color: $color-500;
+
+			&::before {
+				content: '';
+				width: 12px;
+				height: 12px;
+				border-radius: 12px;
+				background-color: $color-one-500;
+				margin-top: 6px;
+				margin-right: 12px;
+			}
+		}
+
+		.table-responsive {
+			border: none;
+		}
+
+		.position-list {
+			border: none;
+			min-width: 320px;
+
+			th {
+				border: none;
+				border-bottom: 1px solid $color-300;
+				text-align: left;
+				padding-bottom: 12px;
+				text-transform: uppercase;
+				color: $color-500;
+				font-weight: 400;
+			}
+
+			td {
+				border: none;
+				border-bottom: 1px solid $color-300;
+				padding-top: 12px;
+				padding-bottom: 12px;
+			}
+		}
+	}
+
+	&-detail {
+		padding: 24px;
+		border-radius: 8px;
+		border: 1px solid $color-400;
+
+		@include breakpoint(walker) {
+			padding: 48px;
+		}
+
+		&-heading {
+			margin-bottom: 32px;
+
+			.title {
+				margin-bottom: 8px;
+			}
+
+			.subtitle {
+				color: $color-500;
+			}
+		}
+
+		&-content {
+
+			.article-post {
+				color: $color-500;
+			}
+		}
+	}
+
+	&-action {
+		padding-top: 32px;
+
+		.button {
+			padding: 12px 24px;
+			border-radius: 5px;
+		}
+	}
+}
+
+.popup-career {
+	max-width: 768px;
+	position: relative;
+	margin: 0 auto;
+	border-radius: 8px;
+	padding: 24px;
+
+	@include breakpoint(crawler) {
+		padding: 48px;
+	}
+
+	.popup-header {
+		margin-bottom: 32px;
+		text-align: center;
+	}
+
+	.form {
+
+		&-text {
+
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			}
+
+			.label {
+				display: block;
+				margin-bottom: 6px;
+			}
+
+			.input {
+				display: block;
+				width: 100%;
+				border: 1px solid $color-400;
+				padding: 8px 12px;
+			}
+		}
+
+		&-submit {
+			padding-top: 12px;
+
+			.button {
+				width: 100%;
+				padding: 12px 24px;
+				border-radius: 5px;
+			}
+		}
+	}
+}
