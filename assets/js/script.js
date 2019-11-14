@@ -93,7 +93,7 @@ jQuery(document).ready(function($) {
 			$('.popup-cart').removeClass('is-toggled');
 			$('body').css('overflow-y', 'auto');
 		}
-		
+
 		if(windowWidth >= 768) {
 			closeMobileMenu();
 		}
@@ -135,7 +135,7 @@ jQuery(document).ready(function($) {
 		var ukrPurhcaseToggler = $('.ukr-selected-update');
 
 		var mobileMenuContainer = $('.mobile-menu-container');
-		
+
     // if the target of the click isn't the container nor a descendant of the container
 		if (!popupLogin.is(e.target) && popupLogin.has(e.target).length === 0 && popupLoginToggler.has(e.target).length === 0) {
 			closeLogin();
@@ -212,11 +212,14 @@ jQuery(document).ready(function($) {
 
 	$('.overview-list .option-toggle').on('change', function() {
 		var $option = $(this).parents('.option');
+		var $optionExpand = $option.find('.option-expand');
 
 		if($option.hasClass('is-toggled')) {
+			$optionExpand.slideUp(200);
 			$option.removeClass('is-toggled');
 		}
 		else {
+			$optionExpand.slideDown(200);
 			$option.addClass('is-toggled');
 		}
 	});
@@ -290,7 +293,7 @@ jQuery(document).ready(function($) {
 
 		return false;
 	});
-	
+
 	$('.logbook-check-all').on('click', function() {
 		var $check = $(this);
 
@@ -379,7 +382,7 @@ jQuery(document).ready(function($) {
 		if(oldValue == '') {
 			oldValue = 0;
 		}
-	
+
 		if ($button.hasClass('button-qty-up')) {
 			var newVal = parseFloat(oldValue) + 1;
 		} else {
@@ -390,9 +393,9 @@ jQuery(document).ready(function($) {
 				newVal = 0;
 			}
 		}
-	
+
 		$button.parent().find(".char-length-input").val(newVal);
-	
+
 	});
 
 });
