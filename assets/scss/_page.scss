@@ -129,5 +129,22 @@
 
 	.page-content {
 
+		.page-frame {
+			border-radius: 8px;
+			border: 1px solid $color-400;
+			padding: 24px 16px;
+
+			@include breakpoint(creeper) {
+				padding: 24px;
+			}
+
+			@include breakpoint(crawler) {
+				padding: 32px;
+			}
+
+			@include breakpoint(runner) {
+				padding: 48px;
+			}
+		}
 	}
 }
