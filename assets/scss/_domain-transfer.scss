@@ -148,6 +148,10 @@
 						font-size: 14px;
 						margin-right: 8px;
 						margin-top: 4px;
+
+						.icon {
+							margin-top: -3px;
+						}
 					}
 				}
 
@@ -166,6 +170,26 @@
 					.input {
 						width: 100%;
 						max-width: 240px;
+					}
+				}
+
+				.file-fields {
+					padding-top: 24px;
+
+					.file-field {
+
+						&:not(:last-child) {
+							margin-bottom: 24px;
+						}
+
+						.label {
+							display: block;
+							margin-bottom: 8px;
+							font-size: 14px;
+						}
+
+						.input {
+						}
 					}
 				}
 			}

@@ -1,3 +1,7 @@
+09.12.19
++ update style.css
++ update domain-transfer-3.html, find comment "Tommy 09.12.19"
+
 28.11.19
 + update style.css
 + add legal-policy.html and privacy-policy.html
