@@ -1,8 +1,14 @@
 .home-slider {
+
   .slides {
+
     .slide {
       display: block;
       width: 100%;
+
+      img {
+        width: 100%;
+      }
     }
 
     .flickity-prev-next-button {
